@@ -12,11 +12,13 @@ The course provides an introduction to different methods on how to create data. 
 The specific chapters and further additional resources will be outlined in the description of each class below.
 
 ### Assessment
-(1) You will have to design an original survey to measure the incidence of a phenomenon of your choice. You will then have to collect responses to pilot your survey (in a modality of your choice: face-to-face or via web-questionnaires, for which you can use the [surveymonkey](https://www.surveymonkey.com) service) and record answers in a .csv file. The 1,000 report should include: (a) a synthesis of the research puzzle/measurement problem that the original survey tackles; (b) a thorough description of the survey protocol and of the pilot (survey items; section order; participants' representativeness; cognitive interviews); (c) an explanation of the steps taken to validate key survey items; (d) the presentation of key descriptive results and conclusions drawn from the pilot (with a critical discussion about potential changes and potential ways to deal with survey error in the final survey).
+(1) You will have to design an original survey to measure the incidence of a phenomenon of your choice. You will then have to collect responses to pilot your survey (in a modality of your choice: face-to-face or via web-questionnaires, for which you can use the [SurveyMonkey](https://www.surveymonkey.com) service) and record answers in a .csv file. The 1,000 report should include: (a) a synthesis of the research puzzle/measurement problem that the original survey tackles; (b) a thorough description of the survey protocol and of the pilot (survey items; section order; participants' representativeness; cognitive interviews); (c) an explanation of the steps taken to validate key survey items; (d) the presentation of key descriptive results and conclusions drawn from the pilot (with a critical discussion about potential changes and potential ways to deal with survey error in the final survey).
 
 (2) You will have to scrape tweets from 2 politicians of your choice and carry out either a sentiment analysis or a topic model analysis, on the basis of a research question of your choosing. The 1,000 words report will include (a) a section describing/justifying the choice of research question and describing the text data scraped; (b) a section where the text mining method is presented, and (c) a section where the results from the comparison are presented (with visualisations and/or numerical summaries). 
 
 For both assessments, [R Markdown](http://rmarkdown.rstudio.com) will need to be used to generate the reports. The snippets of R code will not count towards the word limit.
+
+Please submit your assessments in the relevant folder on the MA5953 Moodle page.
 
 ### Requirements
 
@@ -55,11 +57,12 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 ### Class 1: Introduction to the Course, Resources and to RMarkdown
 
-This class will 
+This class will introduce the whole module, its assessment, requirements and the resources offered. We will also have a look at R Markdown and how to generate a report with it - as R Markdown files are required for submitting the two assessments. We will briefly introduce various survey types and the purpose of surveys.
 
 ***Readings***
 
-* 
+* [The R Markdown CheatSheet] (https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+* Groves et al. (2011) - Chapter 1
 
 ***Additional Resources***
 
@@ -71,12 +74,12 @@ See folder ["Class 1 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### Class 2: Principles in Survey Question Design 
 
-This class will + Pilots and Cognitive Interviews + Validation
+This class will introduce practical advice on how best to design survey questions and will cover cognitive interviewing and a discussion on how to properly pre-test and validate new survey items.
 
 
 ***Readings***
 
-* 
+* Groves et al. (2011) - Chapter 2, 7 & 8
 
 ***Additional Resources***
 
@@ -89,8 +92,7 @@ See folder ["Class 2 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### Class 3: Sampling & Data Collection Methods
 
-This class will 
-
+In this class, we will discuss the issue of representativeness: i.e. whether the survey's results are likely to represent the target population or not. We will talk about various types of sampling methods, and we will go over practical advice on how to collect survey responses and record them in appropriately formatted files. We will have a look at [SurveyMonkey](https://www.surveymonkey.com), as well as more traditional practices for collecting and storing survey responses.
 
 ***Readings***
 
