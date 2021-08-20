@@ -83,6 +83,7 @@ This class will + Pilots and Cognitive Interviews + Validation
 * 
 
 ***Lecture Notes & Computer Lab Material***
+
 See folder ["Class 2 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%202)
 
 
