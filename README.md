@@ -16,10 +16,9 @@ You need to have installed the most up-to-date versions of [R](https://www.r-pro
 
 Some prior knowledge of R and [R Markdown](http://rmarkdown.rstudio.com) is a must, make sure you understand the language basics (packages, objects/vectors, core functions and vector + basic data management operations), and that you know how to trouble-shoot errors and install packages.
 
-􏰀**Introductory Resources - R **:
-
+**Introductory Resources - R **:
 * R Manual: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
-􏰀
+
 * Adler, Joseph. 2009. R in a Nutshell. A Desktop Quick Reference. O’Reilly
 􏰀
 * Teetor, Paul. 2011. R Cookbook. O’Reilly.
