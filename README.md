@@ -250,7 +250,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 10 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%210)
+See folder ["Class 10 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%2010)
 
 
 
@@ -269,5 +269,5 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 11 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%211)
+See folder ["Class 11 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%2011)
 
