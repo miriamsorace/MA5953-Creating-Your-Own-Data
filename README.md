@@ -61,7 +61,7 @@ This class will introduce the whole module, its assessment, requirements and the
 
 ***Readings***
 
-* [The R Markdown CheatSheet] (https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+* [The R Markdown CheatSheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 * Groves et al. (2011) - Chapter 1
 
 ***Additional Resources***
