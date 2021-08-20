@@ -102,7 +102,7 @@ This class will
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 3 Material"]
+See folder ["Class 3 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%203)
 
 
 ### Class 4: Survey Error & Bias Correction
@@ -120,7 +120,7 @@ This class will
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 4 Material"]
+See folder ["Class 4 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%204)
 
 
 ### Class 5: Ethical Issues and Assessment Q&A
@@ -138,7 +138,7 @@ This class will
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 5 Material"]
+See folder ["Class 5 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%205)
 
 
 ### ***Spring Term: Web Scraping & Text Mining*** ###
