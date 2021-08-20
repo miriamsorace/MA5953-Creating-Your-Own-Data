@@ -67,7 +67,7 @@ This class will
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 1 Material"]
+See folder ["Class 1 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%201)
 
 ### Class 2: Principles in Survey Question Design 
 
