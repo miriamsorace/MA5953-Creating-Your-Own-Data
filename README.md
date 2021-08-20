@@ -161,7 +161,7 @@ In the problem set and computer lab, we will practice with webpage analysis by u
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 6 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%201%20Material)
+See folder ["Class 6 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%206)
 
 
 
@@ -183,7 +183,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 7 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%202%20Material)
+See folder ["Class 7 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%207)
 
 
 
@@ -204,7 +204,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 8 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%203%20Material)
+See folder ["Class 8 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%208)
 
 
 ### Class 9: Text Mining I - Text Pre-Processing and the Document-Term Matrix 
@@ -227,7 +227,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 9 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%204%20Material)
+See folder ["Class 9 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%209)
 
 
 
@@ -250,7 +250,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 10 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%205%20Material)
+See folder ["Class 10 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%210)
 
 
 
@@ -269,5 +269,5 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 11 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%206%20Material)
+See folder ["Class 11 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%211)
 
