@@ -12,8 +12,7 @@ The course provides an introduction to different methods on how to create data. 
 The specific chapters and further additional resources will be outlined in the description of each class below.
 
 ### Assessment
-(1) You will have to design an original survey to measure the incidence of a phenomenon of your choice. You will then have to collect responses to your survey (in a modality of your choice: face-to-face or via web-questionnaires, for which you can use the [surveymonkey](https://www.surveymonkey.com) service) and record answers in a .csv file. The 1,000 report should include: (1) a synthesis of the research puzzle/measurement problem that the original survey tackles; (2) a thorough description of the survey protocol (survey items; section order; sampling; delivery; representativeness); (3) the validation of the key survey items; (4) the presentation of key descriptive results (with a discussion of how survey error was dealt with).
-
+(1) You will have to design an original survey to measure the incidence of a phenomenon of your choice. You will then have to collect responses to your survey (in a modality of your choice: face-to-face or via web-questionnaires, for which you can use the [surveymonkey](https://www.surveymonkey.com) service) and record answers in a .csv file. The 1,000 report should include: (a) a synthesis of the research puzzle/measurement problem that the original survey tackles; (b) a thorough description of the survey protocol and survey pilot(s) (survey items; section order; sampling; delivery; representativeness); (c) an explanation of the steps taken to validate key survey items; (d) the presentation of key descriptive results (with a discussion of how survey error was dealt with).
 
 (2) You will have to scrape tweets from 2 politicians of your choice and carry out either a sentiment analysis or a topic model analysis, on the basis of a research question of your choosing. The 1,000 words report will include (a) a section describing/justifying the choice of research question and describing the text data scraped; (b) a section where the text mining method is presented, and (c) a section where the results from the comparison are presented (with visualisations and/or numerical summaries). 
 
@@ -45,14 +44,14 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 5 Lecture-Seminars of 2 hours each
 
-***Spring Term: Web Scraping & Text Mining ***
+***Spring Term: Web Scraping & Text Mining***
 
 6 Computer Labs of 2 hours each: the class will be split into two groups.
 
 
 ## Detailed Course Schedule
 
-## ***Autumn Term: Survey Design & Analysis ##
+## ***Autumn Term: Survey Design & Analysis*** ##
 
 ### Class 1: Introduction to the Course, Resources and to RMarkdown
 
