@@ -57,12 +57,12 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 ### Class 1: Introduction to the Course, Resources and to RMarkdown
 
-This class will introduce the whole module, its assessment, requirements and the resources offered. We will also have a look at R Markdown and how to generate a report with it - as R Markdown files are required for submitting the two assessments. We will briefly introduce various survey types and the purpose of surveys.
+This class will introduce the whole module, its assessment, requirements and the resources offered. We will also have a look at R Markdown and how to generate a report with it - as R Markdown files are required for submitting the two assessments. We will briefly introduce various survey types, survey experiments and the advantages and disadvantages of the survey method.
 
 ***Readings***
 
 * [The R Markdown CheatSheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
-* Groves et al. (2011) - Chapter 1
+* Groves et al. (2011) - Chapters 1 & 5 (only section 5.1)
 
 ***Additional Resources***
 
@@ -74,12 +74,12 @@ See folder ["Class 1 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### Class 2: Principles in Survey Question Design 
 
-This class will introduce practical advice on how best to design survey questions and will cover cognitive interviewing and a discussion on how to properly pre-test and validate new survey items.
+This class will introduce practical advice on how best to design survey questions and will cover the cognitive model of survey answers, cognitive interviewing and a discussion on how to properly pre-test and validate new survey items.
 
 
 ***Readings***
 
-* Groves et al. (2011) - Chapter 2, 7 & 8
+* Groves et al. (2011) - Chapters 2, 7 & 8
 
 ***Additional Resources***
 
@@ -96,7 +96,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 
 ***Readings***
 
-* 
+* Groves et al. (2011) - Chapters 3, 4, 5 (section 5.3 only) & 10 (until section 10.4 inclusive + section 10.8)
 
 ***Additional Resources***
 
@@ -109,12 +109,12 @@ See folder ["Class 3 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### Class 4: Survey Error & Bias Correction
 
-This class will 
+This class will cover survey error and topics such as unrepresentative samples, non-response bias, measurement error and interviewer/interview mode effects. We will discuss practical solutions to correct for such biases, and discuss survey weighting.
 
 
 ***Readings***
 
-* 
+* Groves et al. (2011) - Chapters 6, 9 & 10 (only sections 10.5 and 10.6).
 
 ***Additional Resources***
 
@@ -125,14 +125,14 @@ This class will
 See folder ["Class 4 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%204)
 
 
-### Class 5: Ethical Issues and Assessment Q&A
+### Class 5: Ethical Issues, Recap and Assessment Q&A
 
-This class will 
+This class will discuss ethical issues in the collection of survey data and provide a re-cap of the survey design and analysis process. You will also have an opportunity to discuss the requirements of the assessment.
 
 
 ***Readings***
 
-* 
+* Groves et al. (2011) - Chapter 11
 
 ***Additional Resources***
 
