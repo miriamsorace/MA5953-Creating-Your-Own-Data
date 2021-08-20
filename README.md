@@ -1,12 +1,14 @@
-# MA5953 - Creating Your Own Data: Web Scraping &amp; Text Mining
+# MA5953 - Creating Your Own Data: Survey Design & Analysis; Web Scraping &amp; Text Mining
 
 ## Course Introduction
 
-The course provides an introduction to different methods on how to create data. Specifically, the module will teach you how to scrape data from the web and conduct text analysis using some of the most common methods of supervised and unsupervised classification. 
+The course provides an introduction to different methods on how to create data. Specifically, the module will teach you how to generate data from surveys and how to scrape data from the web and conduct text analysis using some of the most common methods of supervised and unsupervised classification. 
 
 ### Assessment
+(1) You will have to design an original survey to measure the incidence of a phenomenon of your choice. The 1,000 report should include: (1) a synthesis of the research puzzle/measurement problem that the original survey tackles; (2) a thorough description of the survey protocol (survey items; section order; sampling; delivery; representativeness); (3) the validation of the key survey items; (4) the presentation of key descriptive results (with a discussion of how survey error was dealt with).
 
-You will have to scrape tweets from 2 politicians of your choice and carry out either a sentiment analysis or a topic model analysis, on the basis of a research question of your choosing. The 1,000 words report will include (a) a section describing/justifying the choice of research question and describing the text data scraped; (b) a section where the text mining method is presented, and (c) a section where the results from the comparison are presented (with visualisations and/or numerical summaries). You will need to submit your R script together with the report (the R script does not count towards the word limit). 
+
+(2) You will have to scrape tweets from 2 politicians of your choice and carry out either a sentiment analysis or a topic model analysis, on the basis of a research question of your choosing. The 1,000 words report will include (a) a section describing/justifying the choice of research question and describing the text data scraped; (b) a section where the text mining method is presented, and (c) a section where the results from the comparison are presented (with visualisations and/or numerical summaries). You will need to submit your R script together with the report (the R script does not count towards the word limit). 
 
 ### Requirements
 
