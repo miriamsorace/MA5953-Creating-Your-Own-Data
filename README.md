@@ -12,7 +12,7 @@ The course provides an introduction to different methods on how to create data. 
 The specific chapters and further additional resources will be outlined in the description of each class below.
 
 ### Assessment
-(1) You will have to design an original (short) survey to measure the incidence of a phenomenon of your choice (key survey question). Note that you cannot ask sensitive or distressing questions, and you cannot interview people without their consent or under the age of consent or incapable of giving consent. The first step is therefore to obtain ethical approval for your survey. You can do so [here](). After designing the survey and completing the ethics checks, you can then move on to collect responses to pilot your survey (in a modality of your choice: face-to-face or via web-questionnaires, for which you can use the [SurveyMonkey](https://www.surveymonkey.com) service) and record answers in a .csv file. The 1,000 report should include: (a) a synthesis of the research puzzle/measurement problem that the original survey tackles; (b) a thorough description of the survey protocol and of the pilot (survey items; section order; participants' representativeness; cognitive interviews); (c) an explanation of the steps taken to validate key survey items; (d) the presentation of key descriptive results and conclusions drawn from the pilot (with a critical discussion about potential changes to the survey and potential ways to deal with survey error). You need to also include your ethical approval and your survey questionnaire as an appendix. The appendix will not count towards the word limit.
+(1) You will have to design an original survey question and pre-test it via cognitive interviews and a pilot survey with 10-20 people and write a 1,000 words report on your results and outlining the lessons learned and the final survey question. IMPORTANT: You cannot ask sensitive or distressing questions, and you cannot interview people without their consent or under the age of consent or incapable of giving consent. The first step is therefore to obtain ethical approval for your survey. You can do so [here](). I will provide a template consent form in class 5. After designing your question and obtaining ethical approval you can move on to the cognitive testing (explained in detail in class 2). After analysing the responses to the cognitive interviewing task (2-3 people should be enough), you move on to drafting and sending out the pilot survey questionnaire (you can send it out as a printout or using [SurveyMonkey](https://www.surveymonkey.com)). In the pilot survey you are expected to add a couple of survey items from existing (gold standard) surveys (also discussed in class 2). 10-20 people should be enough for this task. Record answers in a .csv file. The 1,000 report should include: (a) a synthesis of the concept/phenomenon measured by the original survey item you created and why it matters; (b) a description of the cognitive interviewing method and process as well as its results; (c) an explanation of the steps taken to validate key survey items with the pilot survey (with the appropriate visualisations - tables & figures); (d) a discussion of recommendations for the final survey item wording and recommendations on the para the presentation of key descriptive results and conclusions drawn from the pilot (with a critical discussion about potential changes to the survey and potential ways to deal with survey error). You need to also include your ethical approval and your survey questionnaire as an appendix. The appendix will not count towards the word limit.
 
 (2) You will have to scrape tweets from 2 politicians of your choice and carry out either a sentiment analysis or a topic model analysis, on the basis of a research question of your choosing. The 1,000 words report will include (a) a section describing/justifying the choice of research question and describing the text data scraped; (b) a section where the text mining method is presented, and (c) a section where the results from the comparison are presented (with visualisations and/or numerical summaries). 
 
@@ -100,7 +100,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 
 ***Additional Resources***
 
-* 
+* Literary Digest Example
 
 ***Lecture Notes & Computer Lab Material***
 
@@ -127,7 +127,7 @@ See folder ["Class 4 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### Class 5: Ethical Issues, Recap and Assessment Q&A
 
-This class will discuss ethical issues in the collection of survey data and provide a re-cap of the survey design and analysis process. You will also have an opportunity to discuss the requirements of the assessment.
+This class will discuss ethical issues in the collection of survey data, will provide templates for consent forms, and provide a re-cap of the survey design and analysis process. You will also have an opportunity to discuss the requirements of the assessment.
 
 
 ***Readings***
