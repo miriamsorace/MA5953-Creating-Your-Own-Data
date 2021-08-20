@@ -12,7 +12,7 @@ The course provides an introduction to different methods on how to create data. 
 The specific chapters and further additional resources will be outlined in the description of each class below.
 
 ### Assessment
-(1) You will have to design an original survey to measure the incidence of a phenomenon of your choice. You will then have to collect responses to your survey (in a modality of your choice: face-to-face or via web-questionnaires, for which you can use the [surveymonkey](https://www.surveymonkey.com) service) and record answers in a .csv file. The 1,000 report should include: (a) a synthesis of the research puzzle/measurement problem that the original survey tackles; (b) a thorough description of the survey protocol and survey pilot(s) (survey items; section order; sampling; delivery; representativeness); (c) an explanation of the steps taken to validate key survey items; (d) the presentation of key descriptive results (with a discussion of how survey error was dealt with).
+(1) You will have to design an original survey to measure the incidence of a phenomenon of your choice. You will then have to collect responses to pilot your survey (in a modality of your choice: face-to-face or via web-questionnaires, for which you can use the [surveymonkey](https://www.surveymonkey.com) service) and record answers in a .csv file. The 1,000 report should include: (a) a synthesis of the research puzzle/measurement problem that the original survey tackles; (b) a thorough description of the survey protocol and of the pilot (survey items; section order; participants' representativeness; cognitive interviews); (c) an explanation of the steps taken to validate key survey items; (d) the presentation of key descriptive results and conclusions drawn from the pilot (with a critical discussion about potential changes and potential ways to deal with survey error in the final survey).
 
 (2) You will have to scrape tweets from 2 politicians of your choice and carry out either a sentiment analysis or a topic model analysis, on the basis of a research question of your choosing. The 1,000 words report will include (a) a section describing/justifying the choice of research question and describing the text data scraped; (b) a section where the text mining method is presented, and (c) a section where the results from the comparison are presented (with visualisations and/or numerical summaries). 
 
@@ -51,14 +51,42 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 ## Detailed Course Schedule
 
-## ***Autumn Term: Survey Design & Analysis*** ##
+### ***Autumn Term: Survey Design & Analysis*** ###
 
 ### Class 1: Introduction to the Course, Resources and to RMarkdown
 
 This class will 
 
+***Readings***
 
-### Class 1: Introduction to the Course, Resources and to RMarkdown
+* 
+
+***Additional Resources***
+
+* 
+
+***Lecture Notes & Computer Lab Material***
+
+See folder ["Class 1 Material"]
+
+### Class 2: Principles in Survey Question Design 
+
+This class will + Pilots and Cognitive Interviews + Validation
+
+
+***Readings***
+
+* 
+
+***Additional Resources***
+
+* 
+
+***Lecture Notes & Computer Lab Material***
+See folder ["Class 2 Material"]
+
+
+### Class 3: Sampling & Data Collection Methods
 
 This class will 
 
@@ -73,8 +101,46 @@ This class will
 
 ***Lecture Notes & Computer Lab Material***
 
+See folder ["Class 3 Material"]
 
-##***Spring Term: Web Scraping & Text Mining***##
+
+### Class 4: Survey Error & Bias Correction
+
+This class will 
+
+
+***Readings***
+
+* 
+
+***Additional Resources***
+
+* 
+
+***Lecture Notes & Computer Lab Material***
+
+See folder ["Class 4 Material"]
+
+
+### Class 5: Ethical Issues and Assessment Q&A
+
+This class will 
+
+
+***Readings***
+
+* 
+
+***Additional Resources***
+
+* 
+
+***Lecture Notes & Computer Lab Material***
+
+See folder ["Class 5 Material"]
+
+
+### ***Spring Term: Web Scraping & Text Mining*** ###
 
 ### Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
 
@@ -94,7 +160,7 @@ In the problem set and computer lab, we will practice with webpage analysis by u
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 1 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%201%20Material)
+See folder ["Class 6 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%201%20Material)
 
 
 
@@ -116,7 +182,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 2 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%202%20Material)
+See folder ["Class 7 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%202%20Material)
 
 
 
@@ -137,7 +203,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 3 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%203%20Material)
+See folder ["Class 8 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%203%20Material)
 
 
 ### Class 9: Text Mining I - Text Pre-Processing and the Document-Term Matrix 
@@ -160,7 +226,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 4 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%204%20Material)
+See folder ["Class 9 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%204%20Material)
 
 
 
@@ -183,7 +249,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 5 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%205%20Material)
+See folder ["Class 10 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%205%20Material)
 
 
 
@@ -202,5 +268,5 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Lecture Notes & Computer Lab Material***
 
-See folder ["Class 6 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%206%20Material)
+See folder ["Class 11 Material"](https://github.com/miriamsorace/MA5953/tree/main/Class%206%20Material)
 
