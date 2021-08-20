@@ -4,6 +4,13 @@
 
 The course provides an introduction to different methods on how to create data. Specifically, the module will teach you how to generate data from surveys and how to scrape data from the web and conduct text analysis using some of the most common methods of supervised and unsupervised classification. 
 
+### Core Readings
+
+* Groves, R. M., Fowler Jr, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2011). Survey methodology (Vol. 561). John Wiley & Sons.
+* Munzert, S., Rubba, C., Meißner, P., & Nyhuis, D. (2014). Automated data collection with R: A practical guide to web scraping and text mining. John Wiley & Sons.
+
+The specific chapters and further additional resources will be outlined in the description of each class below.
+
 ### Assessment
 (1) You will have to design an original survey to measure the incidence of a phenomenon of your choice. You will then have to collect responses to your survey (in a modality of your choice: face-to-face or via web-questionnaires, for which you can use the [surveymonkey](https://www.surveymonkey.com) service) and record answers in a .csv file. The 1,000 report should include: (1) a synthesis of the research puzzle/measurement problem that the original survey tackles; (2) a thorough description of the survey protocol (survey items; section order; sampling; delivery; representativeness); (3) the validation of the key survey items; (4) the presentation of key descriptive results (with a discussion of how survey error was dealt with).
 
@@ -45,7 +52,7 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 ## Detailed Course Schedule
 
-##***Autumn Term: Survey Design & Analysis***##
+## ***Autumn Term: Survey Design & Analysis ##
 
 ### Class 1: Introduction to the Course, Resources and to RMarkdown
 
