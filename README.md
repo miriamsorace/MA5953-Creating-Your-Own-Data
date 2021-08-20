@@ -66,7 +66,7 @@ This class will introduce the whole module, its assessment, requirements and the
 
 ***Additional Resources***
 
-* 
+* Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 
 ***Lecture Notes & Computer Lab Material***
 
@@ -83,7 +83,7 @@ This class will introduce practical advice on how best to design survey question
 
 ***Additional Resources***
 
-* 
+* Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 
 ***Lecture Notes & Computer Lab Material***
 
@@ -101,6 +101,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 ***Additional Resources***
 
 * Literary Digest Example
+* Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 
 ***Lecture Notes & Computer Lab Material***
 
@@ -118,7 +119,7 @@ This class will cover survey error and topics such as unrepresentative samples, 
 
 ***Additional Resources***
 
-* 
+* Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 
 ***Lecture Notes & Computer Lab Material***
 
@@ -136,7 +137,7 @@ This class will discuss ethical issues in the collection of survey data, will pr
 
 ***Additional Resources***
 
-* 
+* Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 
 ***Lecture Notes & Computer Lab Material***
 
