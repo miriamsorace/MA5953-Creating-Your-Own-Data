@@ -127,6 +127,7 @@ This class will cover survey error and topics such as unrepresentative samples, 
 ***Additional Resources***
 
 * Pew Research Centre ["How different weighting methods work"](https://www.pewresearch.org/methods/2018/01/26/how-different-weighting-methods-work/)
+* Data Science Central ["Difference Between Stratified Sampling, Cluster Sampling, and Quota Sampling"](https://www.datasciencecentral.com/profiles/blogs/difference-between-stratified-sampling-cluster-sampling-and-quota)
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 * Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press. (esp. Chapters 1-5)
 
