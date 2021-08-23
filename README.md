@@ -51,7 +51,11 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 6 Computer Labs of 2 hours each: the class will be split into two groups.
 
 
+
+
 ## Detailed Course Schedule
+
+
 
 ### ***Autumn Term: Survey Design & Analysis*** ###
 
@@ -67,6 +71,7 @@ This class will introduce the whole module, its assessment, requirements and the
 ***Additional Resources***
 
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
+* Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press.
 
 ***Lecture Notes & Computer Lab Material***
 
@@ -84,6 +89,7 @@ This class will introduce practical advice on how best to design survey question
 ***Additional Resources***
 
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
+* Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press.
 
 ***Lecture Notes & Computer Lab Material***
 
@@ -102,6 +108,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 
 * Literary Digest Example
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
+* Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press.
 
 ***Lecture Notes & Computer Lab Material***
 
@@ -119,7 +126,9 @@ This class will cover survey error and topics such as unrepresentative samples, 
 
 ***Additional Resources***
 
+* Pew Research Centre ["How different weighting methods work"](https://www.pewresearch.org/methods/2018/01/26/how-different-weighting-methods-work/)
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
+* Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press.
 
 ***Lecture Notes & Computer Lab Material***
 
@@ -138,10 +147,14 @@ This class will discuss ethical issues in the collection of survey data, will pr
 ***Additional Resources***
 
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
+* Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press.
 
 ***Lecture Notes & Computer Lab Material***
 
 See folder ["Class 5 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%205)
+
+
+
 
 
 ### ***Spring Term: Web Scraping & Text Mining*** ###
