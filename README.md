@@ -106,7 +106,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 
 ***Additional Resources***
 
-* R for the Rest of US ["Using R to Automate Survey Administration"](https://rfortherestofus.com/2019/07/using-r-to-automate-survey-administration/)
+* R for the Rest of Us ["Using R to Automate Survey Administration"](https://rfortherestofus.com/2019/07/using-r-to-automate-survey-administration/)
 * Literary Digest Example
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 * Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press. (esp. Chapters 1-5)
