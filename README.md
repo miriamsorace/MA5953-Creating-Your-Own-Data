@@ -98,7 +98,7 @@ See folder ["Class 2 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### Class 3: Sampling & Data Collection Methods
 
-In this class, we will discuss the issue of representativeness: i.e. whether the survey's results are likely to represent the target population or not. We will talk about various types of sampling methods, and we will go over practical advice on how to collect survey responses and record them in appropriately formatted files. We will have a look at how to collect survey data by leveraging [Google Forms](https://www.google.co.uk/forms/about/) via R [helpful tutorial here:](https://rfortherestofus.com/2019/07/using-r-to-automate-survey-administration/), and also cover more traditional practices for collecting and storing survey responses.
+In this class, we will discuss the issue of representativeness: i.e. whether the survey's results are likely to represent the target population or not. We will talk about various types of sampling methods, and we will go over practical advice on how to collect survey responses and record them in appropriately formatted files. We will have a look at how to collect survey data by leveraging [Google Forms](https://www.google.co.uk/forms/about/) via R, and also cover more traditional practices for collecting and storing survey responses.
 
 ***Readings***
 
@@ -106,6 +106,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 
 ***Additional Resources***
 
+* R for the Rest of US ["Using R to Automate Survey Administration"](https://rfortherestofus.com/2019/07/using-r-to-automate-survey-administration/)
 * Literary Digest Example
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 * Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press. (esp. Chapters 1-5)
