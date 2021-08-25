@@ -102,7 +102,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 
 ***Readings***
 
-* Groves et al. (2011) - Chapters 3, 4, 5 (section 5.3 only) & 10 (until section 10.4 inclusive + section 10.8)
+* Groves et al. (2011) - Chapters 4, 5 (section 5.3 only) & 10 (until section 10.4 inclusive + section 10.8)
 
 ***Additional Resources***
 
