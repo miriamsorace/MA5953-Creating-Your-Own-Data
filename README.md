@@ -123,7 +123,7 @@ This class will cover survey error and topics such as unrepresentative samples, 
 
 ***Readings***
 
-* Groves et al. (2011) - Chapters 6, 9 & 10 (only sections 10.5 and 10.6).
+* Groves et al. (2011) - Chapters 6 & 10 (only sections 10.5 and 10.6).
 
 ***Additional Resources***
 
