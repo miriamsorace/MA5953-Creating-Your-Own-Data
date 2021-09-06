@@ -48,7 +48,7 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 ***Spring Term: Web Scraping & Text Mining***
 
-6 Computer Labs of 2 hours each: the class will be split into two groups.
+6 Computer Labs of 2 hours each. NOTE: the class will be split into two groups in the second term!
 
 
 
@@ -69,7 +69,7 @@ This class will introduce the whole module, its assessment, requirements and the
 * Groves et al. (2011) - Chapters 1 & 5 (only section 5.1)
 
 ***Additional Resources***
-
+* Pew Research Centre [Survey Mode and Sample Design](https://www.pewresearch.org/our-methods/international-surveys/survey-mode-and-sample-design/)
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 * Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press. (esp. Chapters 1-5)
 
