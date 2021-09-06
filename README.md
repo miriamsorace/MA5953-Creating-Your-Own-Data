@@ -61,7 +61,7 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 ### Class 1: Introduction to the Course, Resources and to RMarkdown
 
-This class will introduce the whole module, its assessment, requirements and the resources offered. We will also have a look at R Markdown and how to generate a report with it - as R Markdown files are required for submitting the two assessments. We will briefly introduce various survey types, survey experiments and the advantages and disadvantages of the survey method.
+This class will introduce the whole module, its assessment, requirements and the resources offered. We will also have a look at R Markdown and how to generate a report with it - as R Markdown files are required for submitting the two assessments. We will briefly introduce various survey types, and the advantages and disadvantages of various survey methods.
 
 ***Readings***
 
