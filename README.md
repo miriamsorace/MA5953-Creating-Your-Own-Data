@@ -220,6 +220,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 ***Additional Resources***
 
 * [Steps to Access the Twitter API](https://www.youtube.com/watch?v=PqqXjwoDQiY)
+* Chen, K., Duan, Z., & Yang, S. (2021).[Twitter as research data: Tools, costs, skill sets, and lessons learned.](https://www.cambridge.org/core/journals/politics-and-the-life-sciences/article/twitter-as-research-data/6B31D18C5E2F9B8F9C0301BFB05F1C27)Politics and the Life Sciences, 1-17. doi:10.1017/pls.2021.19
 
 ***Lecture Notes & Computer Lab Material***
 
