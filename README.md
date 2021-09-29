@@ -103,11 +103,11 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 ***Readings***
 
 * Groves et al. (2011) - Chapters 4, 5 (section 5.3 only) & 10 (until section 10.4 inclusive + section 10.8)
+* Schneider, D., & Harknett, K. (2019). [What’s to like? Facebook as a tool for survey data collection](https://journals.sagepub.com/doi/full/10.1177/0049124119882477). *Sociological Methods & Research*.
 
 ***Additional Resources***
 
 * R for the Rest of Us ["Using R to Automate Survey Administration"](https://rfortherestofus.com/2019/07/using-r-to-automate-survey-administration/)
-* Literary Digest Example
 * Wolf, C., Joye, D., Smith, T. E., Smith, T. W., & Fu, Y. C. (Eds.). (2016). The SAGE handbook of survey methodology. Sage.
 * Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press. (esp. Chapters 1-5)
 
