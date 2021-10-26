@@ -59,7 +59,7 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 ### ***Autumn Term: Survey Design & Analysis*** ###
 
-### Class 1: Introduction to the Course, Resources and to RMarkdown
+### 10 NOV 2021 - Class 1: Introduction to the Course, Resources and to RMarkdown
 
 This class will introduce the whole module, its assessment, requirements and the resources offered. We will also have a look at R Markdown and how to generate a report with it - as R Markdown files are required for submitting the two assessments. We will briefly introduce various survey types, and the advantages and disadvantages of various survey methods.
 
@@ -77,7 +77,7 @@ This class will introduce the whole module, its assessment, requirements and the
 
 See folder ["Class 1 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%201)
 
-### Class 2: Principles in Survey Question Design 
+### 17 NOV 2021 - Class 2: Principles in Survey Question Design 
 
 This class will introduce practical advice on how best to design survey questions and will cover the cognitive model behind survey responses, cognitive interviewing and a discussion on how to properly pre-test and validate new survey items.
 
@@ -96,7 +96,7 @@ This class will introduce practical advice on how best to design survey question
 See folder ["Class 2 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%202)
 
 
-### Class 3: Sampling & Data Collection Methods
+### 24 NOV 2021 - Class 3: Sampling & Data Collection Methods
 
 In this class, we will discuss the issue of representativeness: i.e. whether the survey's results are likely to represent the target population or not. We will talk about various types of sampling methods, and we will go over practical advice on how to collect survey responses and record them in appropriately formatted files. We will have a look at how to collect survey data by leveraging [Google Forms](https://www.google.co.uk/forms/about/) via R, and also cover more traditional practices for collecting, coding and storing survey responses.
 
@@ -116,7 +116,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 See folder ["Class 3 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%203)
 
 
-### Class 4: Survey Error & Bias Correction
+### 01 DEC 2021 - Class 4: Survey Error & Bias Correction
 
 This class will cover survey error and topics such as unrepresentative samples, non-response bias, measurement error and interviewer/interview mode effects. We will discuss practical solutions to correct for such biases, and discuss survey weighting.
 
@@ -138,7 +138,7 @@ This class will cover survey error and topics such as unrepresentative samples, 
 See folder ["Class 4 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%204)
 
 
-### Class 5: Ethical Issues, Recap and Assessment Q&A
+### 08 DEC 2021 - Class 5: Ethical Issues, Recap and Assessment Q&A
 
 This class will discuss ethical issues in the collection of survey data, will provide templates for consent forms, and provide a re-cap of the survey design and analysis process. You will also have an opportunity to discuss the requirements of the assessment.
 
@@ -162,7 +162,7 @@ See folder ["Class 5 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### ***Spring Term: Web Scraping & Text Mining*** ###
 
-### Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
+### 19 JAN 2021 - Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
 
 This class will introduce you to data science, best practices in data collection and management as well as the most important markup languages that form the building blocks of websites and web applications - i.e.  HTML, XML, and JSON. The class will introduce web scraping via an applied example on endangered cultural and natural sites. Data on such sites will be scraped from Wikipedia and then visualised using maps and histograms.
 
