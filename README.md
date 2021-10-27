@@ -85,7 +85,7 @@ This class will introduce practical advice on how best to design survey question
 ***Readings***
 
 * Groves et al. (2011) - Chapters 2, 7 & 8
-* University of Michigan ["Cognitive Interview Guide Developed by the Performance Measurement Initiative"](https://wdi.umich.edu/wp-content/uploads/Cognitive-Interview-Guide.pdf)
+* William Davidson Institute, University of Michigan ["Cognitive Interview Guide Developed by the Performance Measurement Initiative"](https://wdi.umich.edu/wp-content/uploads/Cognitive-Interview-Guide.pdf)
 
 ***Additional Resources***
 
@@ -93,6 +93,8 @@ This class will introduce practical advice on how best to design survey question
 * Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied survey data analysis. CRC Press. (esp. Chapters 1-5)
 
 ***Lecture Notes & Computer Lab Material***
+
+[In-class cognitive interviewing exercise](https://docs.google.com/forms/d/e/1FAIpQLSfRnb7fYKvpQh0xrPQSZy1L6t5kIqx05BIsYmH34EtdsjUMZA/viewform?usp=sf_link)
 
 See folder ["Class 2 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%202)
 
