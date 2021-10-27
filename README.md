@@ -85,6 +85,7 @@ This class will introduce practical advice on how best to design survey question
 ***Readings***
 
 * Groves et al. (2011) - Chapters 2, 7 & 8
+* University of Michigan ["Cognitive Interview Guide Developed by the Performance Measurement Initiative"](https://wdi.umich.edu/wp-content/uploads/Cognitive-Interview-Guide.pdf)
 
 ***Additional Resources***
 
