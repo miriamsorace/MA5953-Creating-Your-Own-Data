@@ -101,7 +101,7 @@ See folder ["Class 2 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### 24 NOV 2021 - Class 3: Sampling & Data Collection Methods
 
-In this class, we will discuss the issue of representativeness: i.e. whether the survey's results are likely to represent the target population or not. We will talk about various types of sampling methods, and we will go over practical advice on how to collect survey responses and record them in appropriately formatted files. We will have a look at how to collect survey data by leveraging [Google Forms](https://www.google.co.uk/forms/about/) via R, and also cover more traditional practices for collecting, coding and storing survey responses.
+In this class, we will discuss the issue of representativeness: i.e. whether the survey's results are likely to represent the target population or not. We will talk about various types of sampling methods, and we will go over practical advice on how to collect survey responses and record them in appropriately formatted files. We will have a look at how to collect survey data by leveraging [Google Forms](https://www.google.co.uk/forms/about/), and also cover best practices for collecting, coding and storing survey responses.
 
 ***Readings***
 
