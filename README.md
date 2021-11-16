@@ -77,7 +77,7 @@ This class will introduce the whole module, its assessment, requirements and the
 
 See folder ["Class 1 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%201)
 
-### 17 NOV 2021 - Class 2: Principles in Survey Question Design 
+### 17 NOV 2021 - Class 2: Principles of Survey Question Design 
 
 This class will introduce practical advice on how best to design survey questions and will cover the cognitive model behind survey responses, cognitive interviewing and a discussion on how to properly pre-test and validate new survey items.
 
