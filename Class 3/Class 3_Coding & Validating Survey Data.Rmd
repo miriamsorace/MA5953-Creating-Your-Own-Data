@@ -1,0 +1,316 @@
+---
+title: "Survey Data: Coding & Validation"
+author: "Miriam Sorace"
+date: "24/11/2021"
+output: pdf_document
+---
+
+# Initial SetUp
+
+## 1. Global Settings
+
+```{r, include=FALSE}
+# include=FALSE means that this particular R code chunk will not be included in the final report. Useful for global settings or bits of code that might not be necessary to show in the final report (settings/set-up lines of code).
+if (!("knitr" %in% installed.packages())) {
+  install.packages('knitr', repos='http://cran.rstudio.org')}
+library(knitr)
+
+if (!("formatR" %in% installed.packages())) {
+  install.packages("formatR")}
+library(formatR)
+
+knitr::opts_chunk$set(echo = TRUE, error = FALSE, warning = FALSE, message = FALSE, fig.align = "center",
+                      tidy.opts=list(width.cutoff=70), tidy=TRUE) #to avoid source code going out of bounds
+                                                                  #does not work if single var name is too
+                                                                  #long though, as in point 5 below!  
+
+#this line is used to specify any global settings to be applied to the R Markdown script.   The example sets all code chunks as “echo=TRUE”, meaning they will be included in the final rendered version, whereas error/warning messages or any other messages from R will not be displayed in the final, 'knitted' R Markdown file.
+
+```
+
+## 2. Set Working Directory
+
+```{r, include=FALSE}
+# Easy, manual option: go to Session --> Set Working Directory --> To Source File Location (this will mean that the computer folder where you have saved this RMarkdown file will be the working directory)
+
+# Otherwise: copy/paste your folder path in the parentheses of the function below, deleting ~/Downloads
+
+setwd("~/Downloads")
+
+#e.g.
+
+setwd("/Volumes/GoogleDrive/My Drive/Miriam Sorace_POLITICAL SCIENCE/7. MY TEACHING/Kent/MA5953/Class 3 Materials")
+```
+
+## 3. Install Required Packages & Call Relevant Libraries:
+
+```{r}
+
+if (!("tidyverse" %in% installed.packages())) {
+  install.packages("tidyverse")}
+library(tidyverse)
+
+if (!("janitor" %in% installed.packages())) {
+  install.packages("janitor")}
+library(janitor)
+
+if (!("ggplot2" %in% installed.packages())) {
+  install.packages("ggplot2")}
+library(ggplot2)
+
+
+if (!("scales" %in% installed.packages())) {
+  install.packages("scales")}
+library(scales)
+
+if (!("broom" %in% installed.packages())) {
+  install.packages("broom")}
+library(broom)
+
+
+if (!("stargazer" %in% installed.packages())) {
+  install.packages("stargazer")}
+library(stargazer)
+
+```
+
+# Cognitive Interviewing
+
+## 4. Load .csv of completed responses from Google Forms
+
+Something to note: when downloading from Google Forms the variable name is the entire survey item, which can get unwieldy. Just easier to rename directly on the excel file and then upload on to R. Or you can always change the variable names with the line of code provided below, but the excel workaround will usually save you time (unless it is a long survey you are working with).
+
+```{r}
+
+MySurvey<-read.csv("CognInterview.csv")
+
+```
+
+
+## 5. Coding/Data Cleaning
+
+```{r} 
+
+#generate ID variable
+MySurveyCleaned<-tibble::rowid_to_column(MySurvey, "Identification No.")
+
+#renaming variables
+MySurveyCleaned<-dplyr::rename(MySurveyCleaned, ID = "Identification No.")
+
+#drop variables
+
+MySurveyCleaned<-dplyr::select(MySurveyCleaned, -Timestamp)
+
+
+#re-coding
+
+MySurveyCleaned[MySurveyCleaned == "" | MySurveyCleaned == " "] <- NA
+MySurveyCleaned[MySurveyCleaned == "N/A" | MySurveyCleaned == "n/a" | MySurveyCleaned == "N/a"| MySurveyCleaned == "-"] <- NA
+
+#recode string variables (to allow to produce plots)
+
+mapping <- c("Strongly Disagree" = 0, 
+             "Disagree" = 1, 
+             "Neutral" = 2, 
+             "Agree" = 3, 
+             "Strongly Agree" = 4,
+             "Don't Know" = NA)
+
+MySurveyCleaned$QA_REC<- mapping[MySurveyCleaned$QA]
+MySurveyCleaned$QB_REC<- mapping[MySurveyCleaned$QB]
+
+
+#adding value labels
+MySurveyCleaned$QA_REC <- ordered(MySurveyCleaned$QA_REC,
+                     levels = c(0,1,2,3,4),
+                     labels = c("Strongly Disagree", "Disagree", 
+                                "Neutral", "Agree", "Strongly Agree"))
+
+MySurveyCleaned$QB_REC <- ordered(MySurveyCleaned$QB_REC,
+                     levels = c(0,1,2,3,4),
+                     labels = c("Strongly Disagree", "Disagree", 
+                                "Neutral", "Agree", "Strongly Agree"))
+
+MySurveyCleaned$QAHard_rel <- ordered(MySurveyCleaned$QAHard,
+                     levels = c(1,2,3,4,5),
+                     labels = c("Not hard at all", "Somewhat hard", 
+                                "Quite Hard", "Hard", "Very Hard"))
+
+MySurveyCleaned$QBHard_rel <- ordered(MySurveyCleaned$QBHard,
+                     levels = c(1,2,3,4,5),
+                     labels = c("Not hard at all", "Somewhat hard", 
+                                "Quite Hard", "Hard", "Very Hard"))
+
+```
+
+## 6. Validation: Answer Behavior
+
+How often people chose the 'DK' option?  How often did they say that the question was too hard to answer (if analysing the cognitive interview probes)? Some simple descriptive tables/plots can help in getting a sense of how people answer the specific survey question. Providing some descriptive graphs is therefore a good first step. 
+
+
+```{r}
+
+graph1<-ggplot(data=MySurveyCleaned, aes(x=QA_REC)) +
+  geom_bar(stat="count", width=0.7, fill="gray") +
+  theme_minimal() +
+  labs(title="Answers to: `I feel part of a community of staff and students'", 
+         x=" ", y = "Count")
+
+graph1
+
+
+graph2<-ggplot(data=MySurveyCleaned, aes(x=QAHard_rel)) +
+  geom_bar(stat="count", width=0.7, fill="gray") +
+  theme_minimal() +
+  labs(title="How hard was the item: I feel part of a community of staff and students?", 
+         x=" ", y = "Count")
+
+graph2
+
+graph3<-ggplot(data=MySurveyCleaned, aes(x=QB_REC)) +
+  geom_bar(stat="count", width=0.7, fill="gray") +
+  theme_minimal() +
+  labs(title="Answers to: `Marking and Assessment has been fair'", 
+         x=" ", y = "Count")
+
+graph3
+
+
+graph4<-ggplot(data=MySurveyCleaned, aes(x=QBHard_rel)) +
+  geom_bar(stat="count", width=0.7, fill="gray") +
+  theme_minimal() +
+  labs(title="How hard was the item: Marking/Assessment Fair?", 
+         x=" ", y = "Count")
+
+graph4
+
+```
+
+## 7. Cognitive Interviewing: Probing Comprehension and Recall
+
+Cognitive interviewing by its nature has to be open-ended. To analyse answers to the open probes, content analysis of the answers' texts is required. We're going to see automated text analysis methods next term, at this stage and for the first report, you are supposed to do this more qualitatively. 
+
+Go through each text from your files and try to systematize the answers into categories. When I have done this for the cognitive interview you filled out in class, the following patterns emerged.
+
+### Learning Community Question 
+
+#### Comprehension 
+
+The two main themes that emerged when students were asked to report what 'community of staff and students' means are *togetherness* (mentioned by ~50% of respondents) and *belonging/socialising* (mentioned by 42% of respondents). Individuals that interpreted the question as being about togetherness, mentioned availability of staff to engage in regular communication with the students (most examples mentioned the classroom as the environment of collaboration/communication and the fostering of a community), collaborative work between staff and students, and the existence of communication forums. Individuals that interpreted the question as being about belonging, mentioned inclusive educational/working environments, having systems of support in place, being part of societies, and regular and mutually supportive connections with other students. The second conceptualisation mostly refers to other students, socialisation with academics is never the way this question is understood. Staff-student community-building processes are mainly seen as a working relationship, to be carried out in the context of seminars and lectures. A particular answer exemplifies this well:
+
+"Do I socialise with other students (yes) do I socialise with staff (no),  does it bother me that I don't socialise with staff (no), hence my neutral answer."
+
+There might be an issue with the fact that the question might conflate two things: working collaboratively vs. socialising, and that the implied expectation that staff needs to socialise with students (which might not be what students prioritise in their working relationship with academic staff) might drive the scores down. 
+
+Finally, a person mentioned that the meaning of the question was entirely unclear. 2 people mentioned being involved in the University's decision-making and organisation. 
+
+#### Retrieval
+
+Not a lot of students offered detailed accounts of the calculations that went into providing the answer. This might be very well be due to the short time granted to respondents to answer this question, and to the more quantitative format of the probing questionnaire. Most students mentioned 'nothing' or 'off the top of my head' without elaborating. Many however clearly outlined processes of recollection of experiences (staff communication/approachability; socialisation experiences with other students; the helpfulness of interactions with staff).
+
+### Recommendations
+
+On the basis of the results from the cognitive interviewing on the survey item on the learning community, it would be recommended to split the survey question into two: one about ease of communication and collaboration between students and academics, and one about student socialisation and support activities. To the extent that student-staff socialisation is valuable (not really apparent from the cognitive interviews, but this needs further analysis) a question to gauge the importance given by students to this dimension of staff-student interaction is warranted.
+
+### Feedback Question 
+
+#### Comprehension 
+
+The question on feedback was overwhelmingly understood (69% of respondents) as being about the uniform, consistent application of the marking scheme to all students without bias, as well as the guarantee of equal access to feedback opportunities. Some students mentioned also understanding the question as being about the extent to which assessment/feedback in the University is based on testing what learnt in class or included in the syllabus, and others mentioned understanding the question as being about conveners providing clear communication about assessment details and marking scheme well in advance. 
+
+#### Retrieval
+
+Again, answers to the recall probe were very concise and unlikely to contain all mental processes involved, but this has to do with the short time given to the students to respond as this was done in class. It is recommended to give a lot of time to respondents that engage in cognitive probing (1h or 90 minutes depending on how many survey items need to be evaluated). 
+
+Most mentioned trying to retrieve their personal experiences of receiving and reading their feedback and comparing it to the marking scheme. 
+
+#### Recommendation
+
+There is more agreement on the meaning of this question, so the survey item seems to be working broadly well as it is. Unpacking fairness from procedural aspects of assessment and feedback (such as provision of assessment details in advance) may be warranted, as fairness seems to be driving the responses, a lot of emphasis is put on the adjective.
+
+# Validation
+
+## 8. Correlational Validity: Simple Visualisations
+
+You will do this step as part of your final survey, not as part of your cognitive interviewing process. Correlational validity is fielding - in addition to your bespoke survey item - either a gold standard question or a survey item that should be a *theoretical correlate* (based on previous studies) of the phenomenon your bespoke survey item is supposed to measure. 
+
+Let's load therefore a different dataset - containing the results from a student satisfaction survey I have run recently (these are *not* results from a cognitive interview).
+
+```{r}
+
+FinalSurvey<-read.csv("survey.csv")
+
+```
+
+The dataset I have named 'Final Survey' contains 2 variables: ExplainGood and LearnNew. ExplainGood contains 5 point Likert scale answers to the question "Please state the extent to which you agree with the statement:"the seminar teacher is good at explaining and clarifying concepts"'. LearnNew contains 5-point Likert scale answers to the question: "Please state the extent to which you agree with the statement:"I always learn something new in the seminars"'. 1 means 
+
+We need to evaluate the validity of the first survey item, i.e. 'ExplainGood'. The teacher's ability to explain and clarify should theoretically correlate with students' learning. Therefore, if the survey item is valid, we should see a statistically significant correlation between the two variables. 
+
+We can explore the associtation between the two variables first descriptively, via cross-tabulations and/or scatterplots. See code below:
+
+```{r}
+#Cross-Tabulation (better for categorical variables)
+
+table1 <- FinalSurvey %>%
+  tabyl(LearnNew, ExplainGood) %>%
+  adorn_totals("col") %>%
+  adorn_percentages("col") %>% 
+  adorn_pct_formatting(rounding = "half up", digits = 0) %>%
+  adorn_ns() %>%
+  knitr::kable()
+
+table1
+
+#Scatterplot (better for continuous variables - can't use ordered/factor variables: use numerical! If your variables are not numeric you can just convert them using as.numeric())
+
+ggplot(FinalSurvey, aes(x=ExplainGood, y=LearnNew)) + 
+  geom_point(color="black") +
+  geom_smooth(method=lm, linetype="dashed",
+             color="gray29") +
+  theme_classic() 
+
+
+```
+
+If we look at the table, when ExplainGood has higher values, LearnNew also has higher values. The scatterplot also clearly shows a positive association: the more the teacher's quality is evaluated highly, the more students report having learnt something new.
+
+## 9. Correlational Validity via Formal Hypothesis Testing
+
+The above was just a way of 'eyeballing' the relationship. For a formal evaluation of the relationship, we can use regression analysis. Regression analysis is a statistical technique that estimates the strength and statistical significance of the association between two (or more) variables. For more information, see: https://stats.idre.ucla.edu/wp-content/uploads/2021/05/R_reg_part1.html#(1)
+
+We won't go into the details here, it will just be sufficient to know that the coefficient next to the second variable is the amount of change in the first variable (the dependent variable - or the variable we're testing for validity) for a 1-unit change in the explanatory (or independent) variable. The second thing to know is that if the t-value is above 2, the relationship is statistically significantly different from zero - meaning that an effect of zero (absence of a relationship) is statistically unlikely given the data observed. Whenever the t-value is above 2, the regression table will display stars. 
+
+```{r, results='asis'}
+#remember: you need to add ,results='asis' for stargazer to output a table in your knitted Rmd
+
+model1<-lm(LearnNew ~ ExplainGood, data = FinalSurvey)
+
+summary(model1)
+
+#getting a nicer-looking table
+
+stargazer(model1)
+
+
+
+
+```
+
+We find that the coefficient is ~ 0.74 and statistically significant at the 0.001 level. This means that the relationship is statistically significantly different from zero. The value of 0.74 means that for a unit increase in the evaluation of the teacher - e.g. moving from Strongly Disagree to Disagree - there is a 0.74 unit increase in reporting to have learnt something new. Given that the two items are measured using the same scale (disagree-agree in 5-points Likert scales) this is nearly a 1:1 relationship, so quite strong. REMEMBER: if the two variables are not measured using the same scale, you won't be able to say anything about the magnitude of the effect like we've been able to do here. You'll need to standardise your variables first in order to do that (see below)
+
+
+```{r, results='asis'}
+#extra code: in case you'll need to correlate two variables measured with different scales
+
+modelStd<-lm(scale(LearnNew) ~ scale(ExplainGood), data=FinalSurvey)
+
+#getting a nicer-looking table
+
+stargazer(modelStd)
+
+
+```
+
+This will return the coefficient expressed in standard deviations change: for a standard deviation increase in X, you get [beta coefficient value] standard deviation increase in Y. 
+
+In this example it is giving us the same result, since the two variables were already measured using the same scale in our case. But note that the intercept is now 0! 
