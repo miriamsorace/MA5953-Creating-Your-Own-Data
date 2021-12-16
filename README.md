@@ -52,8 +52,7 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 ***Spring Term: Web Scraping & Text Mining***
 
-6 Computer Labs of 2 hours each. NOTE: the class will be split into two groups in the second term!
-
+6 Computer Labs of 2 hours each. NOTE: the class will be split into two groups in the second term! Please check your timetable to know your group.
 
 
 
@@ -169,7 +168,7 @@ See folder ["Class 5 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### ***Spring Term: Web Scraping & Text Mining*** ###
 
-### 19 JAN 2021 - Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
+### 21 JAN 2021 - Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
 
 This class will introduce you to data science, best practices in data collection and management as well as the most important markup languages that form the building blocks of websites and web applications - i.e.  HTML, XML, and JSON. The class will introduce web scraping via an applied example on endangered cultural and natural sites. Data on such sites will be scraped from Wikipedia and then visualised using maps and histograms.
 
@@ -191,7 +190,7 @@ See folder ["Class 6 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### Class 7: Web Scraping & Regular Expressions
+### 28 JAN 2021 - Class 7: Web Scraping & Regular Expressions
 
 This class will introduce you to webscraping from static webpages. Dynamic webpage scraping will also be briefly introduced. You will learn about node query scraping, scraping via regular expressions, and scraping via APIs. You will then learn how to parse webpages, scrape tables, texts and links using R. You will also learn how to loop over URL lists and/or lists of links to scrape multiple webpages at once. 
 
@@ -213,7 +212,7 @@ See folder ["Class 7 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### Class 8: Scraping Social Media Data
+### 04 FEB 2021 - Class 8: Scraping Social Media Data
 
 This class will introduce you to webscraping in Twitter. You will see some empirical applications of Twitter data from the political science, finance and public health fields. You will learn about the functioning of APIs more in depth, and how to gain access to Twitter rest and streaming APIs. The class will introduce the most important R packages and functions to scrape and clean Twitter data. 
 
@@ -234,7 +233,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 See folder ["Class 8 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%208)
 
 
-### Class 9: Text Mining I - Text Pre-Processing and the Document-Term Matrix 
+### 11 FEB 2021 - Class 9: Text Mining I - Text Pre-Processing and the Document-Term Matrix 
 
 This class will provide you with an overview of various text mining methods, from supervised to unsupervised ones, from classification to scaling ones. You will see some empirical applications of the various methods from the political science field. You will learn about corpora, tokens, stemming, stop-words, keywords-in-context, the td-idf measure, and - crucially - about the document-feature matrix (dfm) and the bag of words assumption. The lecture will also discuss the core functions from the quanteda package to clean and trim the dfm. 
 
@@ -258,7 +257,7 @@ See folder ["Class 9 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### Class 10: Text Mining II - Sentiment Analysis: Dictionaries and the Naïve Bayes Classifier
+### 18 FEB 2021 - Class 10: Text Mining II - Sentiment Analysis: Dictionaries and the Naïve Bayes Classifier
 
 In this class you will learn about dictionaries and about the Naïve Bayes (NB) classifier, their advantages and disadvantages. You will see some empirical applications from the political science field and learn about some of the most important existing dictionaries. You will learn how to build your own bespoke dictionary as well. The lecture will also discuss the core functions from the quanteda package to perform dictionary and NB classification.
 
@@ -281,7 +280,7 @@ See folder ["Class 10 Material"](https://github.com/miriamsorace/MA5953-Creating
 
 
 
-### Class 11: Text Mining III - Topic Models
+### 25 FEB 2021 - Class 11: Text Mining III - Topic Models
 
 In this class you will learn about topic model analysis, as well as its advantages and disadvantages and the various validation steps required. The lecture will also discuss the core functions from the quanteda and seededlda packages to perform topic model.
 
