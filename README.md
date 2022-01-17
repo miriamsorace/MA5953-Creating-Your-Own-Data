@@ -170,9 +170,9 @@ See folder ["Class 5 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### 21 JAN 2021 - Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
 
-This class will introduce you to data science, best practices in data collection and management as well as the most important markup languages that form the building blocks of websites and web applications - i.e.  HTML, XML, and JSON. The class will introduce web scraping via an applied example on endangered cultural and natural sites. Data on such sites will be scraped from Wikipedia and then visualised using maps and histograms.
+This class will introduce you to data science, best practices in data collection and management as well as the most important markup languages that form the building blocks of websites and web applications - i.e.  HTML, XML, and JSON. The class will introduce web scraping by presenting some real-world applications.
 
-In the problem set and computer lab, we will practice with webpage analysis by using the Element Inspector. We will reinforce our knowledge of HTML tags by manually reproducing a webpage using such tags. We will also reproduce the endangered sites analysis from the lecture. 
+In the problem set and computer lab, we will practice with webpage analysis by using the Element Inspector. We will reinforce our knowledge of HTML tags by manually reproducing a webpage using such tags. 
 
 
 ***Readings***
