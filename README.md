@@ -181,8 +181,9 @@ In the problem set and computer lab, we will practice with webpage analysis by u
 
 ***Additional Resources***
 
-* [HTML Explained in 4 Minutes (by 24G)](https://www.youtube.com/watch?v=ofox_6_-gGo)
 * [HTML, CSS, JavaScript Explained](https://www.youtube.com/watch?v=gT0Lh1eYk78&feature=youtu.be)
+* [HTML Explained in 5 Minutes](https://www.youtube.com/watch?v=salY_Sm6mv4)
+
 
 ***Lecture Notes & Computer Lab Material***
 
