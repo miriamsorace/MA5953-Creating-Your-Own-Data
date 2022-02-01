@@ -250,6 +250,7 @@ In the problem set and computer lab, we will practice with the R code introduced
 
 ***Additional Resources***
 
+* Wilkerson, J., & Casas, A. (2017). Large-scale computerized text analysis in political science: Opportunities and challenges. Annual Review of Political Science, 20, 529-544.
 * [Ken Benoit Interview on Converting Texts to Numbers](https://www.youtube.com/watch?v=9B14nsEIsUs)
 * [Ken Benoit - Quanteda Tutorial](https://www.youtube.com/watch?v=UAACR3OAvxM)
 
