@@ -218,9 +218,6 @@ See folder ["Class 7 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 This class will introduce you to webscraping in Twitter. You will see some empirical applications of Twitter data from the political science, finance and public health fields. You will learn about the functioning of APIs more in depth, and how to gain access to Twitter rest and streaming APIs. The class will introduce the most important R packages and functions to scrape and clean Twitter data. 
 
-In the problem set and computer lab, we will practice with the R code introduced in the lecture in order to scrape from the Twitter rest and streaming APIs. We will also do practical exercises and search for Tweets on Brexit and on the 2020 Presidential Elections. We will also look at Obama's tweets and introduce the quanteda text analysis package by building our very first wordcloud. 
-
-
 ***Readings***
 
 * Munzert et al. 2015 Automated Data Collection with R – Chapter sections: 9.1.10, 9.2.3 & Chapter 14
