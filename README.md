@@ -236,7 +236,7 @@ See folder ["Class 8 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 This class will provide you with an overview of various text mining methods, from supervised to unsupervised ones, from classification to scaling ones. You will see some empirical applications of the various methods from the political science field. You will learn about corpora, tokens, stemming, stop-words, keywords-in-context, the td-idf measure, and - crucially - about the document-feature matrix (dfm) and the bag of words assumption. The lecture will also discuss the core functions from the quanteda package to clean and trim the dfm. 
 
-In the problem set and computer lab, we will practice with the R code introduced in the lecture. We will also get our hands dirty by summarising the corpuses of Biden and Trump tweets and by comparing their top words. The group exercise will reproduce the entire code using tweets from Labour and Conservative MPs.
+In the problem set and computer lab, we will practice with the R code introduced in the lecture. 
 
 
 ***Readings***
