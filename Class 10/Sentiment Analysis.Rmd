@@ -1,0 +1,429 @@
+---
+title: "Sentiment Analysis"
+output: html_document
+---
+
+```{r, include=FALSE}
+
+#### GLOBAL OPTIONS (REPORT RENDERING)
+
+# include=FALSE means that this particular R code chunk will not be included in the final report. Useful for global settings or bits of code that might not be necessary to show in the final report (settings/set-up lines of code).
+if (!("knitr" %in% installed.packages())) {
+  install.packages('knitr', repos='http://cran.rstudio.org')}
+library(knitr)
+
+if (!("formatR" %in% installed.packages())) {
+  install.packages("formatR")}
+library(formatR)
+
+knitr::opts_chunk$set(echo = TRUE, error = FALSE, warning = FALSE, message = FALSE, fig.align = "center",
+                      tidy.opts=list(width.cutoff=70), tidy=TRUE) #to avoid source code going out of bounds
+                                                                  #does not work if single var name is too
+                                                                  #long though, as in point 5 below!  
+
+#this line is used to specify any global settings to be applied to the R Markdown script.   The example sets all code chunks as “echo=TRUE”, meaning they will be included in the final rendered version, whereas error/warning messages or any other messages from R will not be displayed in the final, 'knitted' R Markdown file.
+
+### permanently setting the CRAN mirror (avoids error "trying to use CRAN without setting a mirror")
+
+local({r <- getOption("repos")
+       r["CRAN"] <- "http://cran.r-project.org"
+       options(repos=r)})
+
+```
+
+
+
+
+```{r, include = F}
+
+#### INSTALL RELEVANT PACKAGES
+
+if (!("quanteda" %in% installed.packages())) {
+  install.packages("quanteda")
+}
+
+#quanteda extensions: 
+if (!("quanteda.corpora" %in% installed.packages())) {
+  devtools::install_github("quanteda/quanteda.corpora")
+}
+
+if (!("quanteda.dictionaries" %in% installed.packages())) {
+  devtools::install_github("kbenoit/quanteda.dictionaries")
+}
+
+if (!("quanteda.textmodels" %in% installed.packages())) {
+   install.packages("quanteda.textmodels")
+}
+
+
+if (!("quanteda.textplots" %in% installed.packages())) {
+  install.packages("quanteda.textplots")
+}
+
+if (!("quanteda.textstats" %in% installed.packages())) {
+  install.packages("quanteda.textstats")
+}
+
+#additional packages
+
+if (!("readtext" %in% installed.packages())) {
+  install.packages("readtext")
+}
+
+if (!("spacyr" %in% installed.packages())) {
+  install.packages("spacyr")
+}
+
+if (!("caret" %in% installed.packages())) {
+  install.packages("caret", dependencies = TRUE)
+}
+
+if (!("e1071" %in% installed.packages())) {
+  install.packages('e1071', dependencies=TRUE)
+}
+
+#data manipulation
+
+if (!("dplyr" %in% installed.packages())) {
+  install.packages("dplyr")
+}
+
+if (!("lubridate" %in% installed.packages())) {
+  install.packages("lubridate")
+}
+
+
+library("quanteda")
+library("quanteda.corpora")
+library("quanteda.dictionaries")
+library("quanteda.textmodels")
+library("quanteda.textplots")
+library("quanteda.textstats")
+library("readtext")
+library("spacyr")
+library("caret")
+library("e1071")
+library("dplyr")
+library("lubridate")
+
+```
+
+
+
+
+```{r, include=F}
+##### REMEMBER: WORKING DIRECTORY!
+
+# Either Session --> Set Working Directory --> To Source File Location (should do it automatically, but only when knitting - so, if you want to run the code bit by bit first do set the wd here). To Source File Location means that the data will be imported and saved IN THE SAME FOLDER where you saved the RMarkdown file you're working with!
+
+## OR
+
+## setwd("")
+
+```
+
+
+## Task 1: Reading Text Data into R, Transforming to a Corpus Object and Cleaned DFM ##
+
+The lines of code below are useful to merge the two twitter datasets and to transform the .csv files into corpus objects, which allow text analysis functions to be applied to the texts. We have seen similar lines of code in class 9 as well, so this should not be new.
+
+```{r}
+
+ObamaTweets<-readtext("Obama_tweets.csv", text_field = "text", encoding = "ISO-8859-1")
+#Twitter-specific step: remove emoticons (using regular expression for emojis/non-ASCII characters):
+ObamaTweets$text <-gsub("[^\x01-\x7F]", "", ObamaTweets$text)
+ObamaCorpus<-corpus(ObamaTweets)
+
+
+PenceTweets<-readtext("Pence_tweets.csv", text_field = "text", encoding = "ISO-8859-1")
+#Twitter-specific step: remove emoticons (using regular expression for emojis/non-ASCII characters):
+PenceTweets$text <-gsub("[^\x01-\x7F]", "", PenceTweets$text)
+PenceCorpus<-corpus(PenceTweets)
+
+#adding the two corpus objects together
+MasterCorpus<-ObamaCorpus+PenceCorpus
+MasterCorpus$author<-docvars(MasterCorpus, "screen_name")
+MasterCorpus$timestamp<-docvars(MasterCorpus, "created_at")
+
+
+#Converting and trimming the DFM:
+
+DFM_Master<- tokens(MasterCorpus, 
+                   remove_punct = TRUE, 
+                   remove_symbols = T, 
+                   remove_numbers=T, 
+                   remove_url=T) %>%
+                   dfm() %>%
+                   dfm_tolower()
+
+
+# remove stopwords:
+DFM_Master<- dfm_remove(DFM_Master, pattern = stopwords("en"))
+
+# to remove other words you think irrelevant (stopword lists may not be comprehensive)
+DFM_Master <- dfm_remove(DFM_Master, pattern = c("one", "also", "president", "amp", "obama", "@mike_pence"))
+
+
+```
+
+## Task 3: Sentiment Analysis with a Pre-Existing Dictionary ##
+
+In this step, we are going to apply an off-the-shelf dictionary - the Lexicoder Dictionary (see: https://quanteda.io/reference/data_dictionary_LSD2015.html) - which scales texts according to their degree of positivity or negativity. Dictionaries can be applied directly to the dfm, thanks to the option "dictionary=". 
+
+Please cite this article when using the Lexicoder Sentiment Dictionary and related resources. Young, L. & Soroka, S. (2012). Lexicoder Sentiment Dictionary. Available at http://www.snsoroka.com/data-lexicoder/.
+
+```{r}
+#Lexicoder Sentiment Dictionary created by Young and Soroka: Negative vs. Positive Sentiment
+dict<-dictionary(data_dictionary_LSD2015[1:2])
+
+#the below code is going to apply the dictionary to **each individual tweet**. valuetype = glob means pattern-matching via wildcard expressions (e.g. work* will capture all variations)
+
+DFM_Master_Lexi<-dfm_lookup(DFM_Master, dict, valuetype = "glob")
+DFM_Master_Lexi
+DFM_Master_Lexi<-convert(DFM_Master_Lexi, to ="data.frame")
+# let's generate the author variable in this new DFM
+
+DFM_Master_Lexi$author<- ifelse(grepl("Obama", DFM_Master_Lexi$doc_id), "Obama", 
+                         ifelse(grepl("Pence", DFM_Master_Lexi$doc_id), "Pence", "NA"))
+
+
+#plots, summaries:
+
+p<-ggplot(DFM_Master_Lexi,aes(negative, group = author)) + 
+          geom_bar(aes(y = ..prop.., fill = factor(..x..)), stat="count") + 
+          scale_y_continuous(labels=scales::percent) +
+          ylab("relative frequencies") +
+          xlab("N of negative mentions per Tweet") +
+          facet_grid(~author)
+p
+
+
+DFM_Master_Lexi %>% 
+  group_by(author) %>% 
+  summarize(mean = mean(negative),
+            sum = sum(negative))
+
+
+
+p<-ggplot(DFM_Master_Lexi,aes(positive, group = author)) + 
+          geom_bar(aes(y = ..prop.., fill = factor(..x..)), stat="count") + 
+          scale_y_continuous(labels=scales::percent) +
+          ylab("relative frequencies") +
+          xlab("N of positive mentions per Tweet") +
+          facet_grid(~author)
+p
+
+
+DFM_Master_Lexi %>% 
+  group_by(author) %>% 
+  summarize(mean = mean(positive),
+            sum = sum(positive))
+
+```
+
+
+## Task 4: Applying a dictionary to a subset of tweets only - e.g. by topic ##
+
+Say you are interested in the environment topic and want to see who expresses more positive/negative views *on that specific topic* between the two politicians. You have to first identify tweets that are on immigration, and only retain those. Then apply the dictionary to this subset. The code below does precisely that:
+
+```{r}
+#Need to use the corpus object to do this - and apply cleaning/trimming to it:
+Tokens_Master <- tokens(MasterCorpus, remove_punct = TRUE, 
+                  remove_symbols = T, 
+                  remove_numbers=T, 
+                  remove_url=T) %>%
+                  tokens_tolower() %>%
+                  tokens_select(pattern = stopwords("en"), selection = "remove") %>%
+                  tokens_select(pattern = c("one", "also", "president", "amp", "obama", "@mike_pence"), selection = "remove")
+
+#search for all variations of a root word - do it with the regular expression (wildcard "*") below:
+
+env <-c('climate', 'environment*', 'pollut*', 'plastic','emission*', 'fossil fuel', 'renewable*', 'temperature*', 'conservation', 'planet')
+toks_env <- tokens_keep(Tokens_Master, pattern = phrase(env), window = 10)
+
+
+#use the toks_env object only, transform to DFM and apply the Lexicoder dictionary saved above to it: 
+
+DFM_Env_Lexi <-dfm(toks_env)
+DFM_Env_Lexi<-dfm_lookup(DFM_Env_Lexi, dict, valuetype = "glob")
+DFM_Env_Lexi
+DFM_Env_Lexi<-convert(DFM_Env_Lexi, to ="data.frame")
+
+
+
+# let's generate the author variable in this new DFM:
+
+DFM_Env_Lexi$author<- ifelse(grepl("Obama", DFM_Env_Lexi$doc_id), "Obama", 
+                         ifelse(grepl("Pence", DFM_Env_Lexi$doc_id), "Pence", "NA"))
+
+
+# plots, summaries:
+p<-ggplot(DFM_Env_Lexi,aes(positive, group = author)) + 
+          geom_bar(aes(y = ..prop.., fill = factor(..x..)), stat="count") + 
+          scale_y_continuous(labels=scales::percent) +
+          ylab("relative frequencies") +
+          xlab("N of positive mentions per Tweet") +
+          ggtitle ("Environment Topic") +
+          facet_grid(~author)
+p
+
+
+DFM_Env_Lexi %>% 
+  group_by(author) %>% 
+  summarize(mean = mean(positive),
+            sum = sum(positive))
+
+
+## Only considering non-zero entries in either sentiment variable (e.g. only considering environment tweets where (any) sentiment expressed)
+DFM_Env_Lexi_Non0<- filter(DFM_Env_Lexi, negative > 0 | positive >0)
+
+
+# plots, summaries:
+
+p<-ggplot(DFM_Env_Lexi_Non0,aes(positive, group = author)) + 
+          geom_bar(aes(y = ..prop.., fill = factor(..x..)), stat="count") + 
+          scale_y_continuous(labels=scales::percent) +
+          ylab("relative frequencies") +
+          xlab("N of positive mentions per Tweet") +
+          ggtitle ("Environment Topic") +
+          facet_grid(~author)
+p
+
+
+DFM_Env_Lexi_Non0 %>% 
+  group_by(author) %>% 
+  summarize(mean = mean(positive),
+            sum = sum(positive))
+
+#Exploring a specific text: visualise DFM_Env_Lexi and sort by high negative and/or high positive. Which texts are most negative? For Obama, it is text 621, for Pence it is Tweet 562. Which are most positive? For Obama is text 64, and for Pence is 2468 - let's explore them from the original dataset of tweets to understand better what the dictionary is doing:
+
+#negative texts
+
+ObamaTweets$text[621]
+PenceTweets$text[562]
+
+#positive texts
+ObamaTweets$text[64]
+PenceTweets$text[2468]
+
+```
+
+Both texts classified as super negative on the environment, and they are on the topic and appear indeed to be using ominous language: however - the message is clearly pro-environment! Positive texts are more about publicising/supporting some environmental initiatives, whilst negative texts are likely to express concern over climate change. So two sides of the same coin, really. We probably need to create a bespoke dictionary to get at pro- vs. anti-environment. Getting at policy-specific sentiment using general negative/positive language dictionaries is unlikely to work well. 
+
+## Task 5: Sentiment Analysis with own Bespoke Dictionary ##
+
+Say we now want to create our own bespoke dictionary, capturing specific pro- and anti-environment language ... to do that, we first have to identify which features (words) are valid indicators of pro- and anti-environmental attitudes. This requires extensive work which looks at existing literature and analyses texts by political actors and interest groups on the environment, for example. For the purposes of this demonstration, we'll broadly rely on findings from an important study on pro- vs. anti-environmental language: Boussalis, C., & Coan, T. G. (2016). Text-mining the signals of climate change doubt. Global Environmental Change, 36, 89-100.
+
+Once you have finished the research process and discovered the key-words most associated with each sentiment class, you create a dictionary with the *dictionary* function, by plugging in the keywords for each category (here: anti-environment and pro-environment). You then apply the dictionary to the relevant dfm as done before.
+
+```{r}
+
+envdict<- dictionary(list(proenv = c("warming", "fight", "climate change","act*","global efforts", "kyoto","protocol","Paris agreement","climate", "renewable*", "*deny*", "denier*", "denial", "clean energy", "crisis", "tackl*"),
+                          antienv= c("cost*", "business*", "chin*", "mitig*",
+                                        "india","asia*", "trad*", "tax","spend*",
+                                        "expen*", "resili*", "certain*", "consensus", "alarmism", "radical")))
+
+
+#again, let's first filter tweets that mention the topic:
+
+env <-c('climate', 'environment*', 'pollut*', 'plastic','emission*', 'fossil fuel', 'renewable*', 'temperature*', 'conservation', 'planet')
+toks_env <- tokens_keep(Tokens_Master, pattern = phrase(env), window = 10)
+
+
+#use the toks_env object only, transform to DFM and apply the bespoke dictionary saved above to it: 
+
+DFM_Env_Orig <-dfm(toks_env)
+DFM_Env_Orig <-dfm_lookup(DFM_Env_Orig, envdict, valuetype = "glob")
+DFM_Env_Orig 
+DFM_Env_Orig <-convert(DFM_Env_Orig , to ="data.frame")
+
+
+
+# let's generate the author variable in this new DFM:
+
+DFM_Env_Orig$author<- ifelse(grepl("Obama", DFM_Env_Orig$doc_id), "Obama", 
+                         ifelse(grepl("Pence", DFM_Env_Orig$doc_id), "Pence", "NA"))
+
+
+## Only use non-zero entries in either sentiment variable (e.g. only considering environment tweets where (any) sentiment expressed)
+DFM_Env_Orig_Non0<- filter(DFM_Env_Orig, proenv > 0 | antienv >0)
+
+
+# plots, summaries:
+
+p<-ggplot(DFM_Env_Orig_Non0,aes(proenv, group = author)) + 
+          geom_bar(aes(y = ..prop.., fill = factor(..x..)), stat="count") + 
+          scale_y_continuous(labels=scales::percent) +
+          ylab("relative frequencies") +
+          xlab("N of pro-env. mentions per Tweet") +
+          ggtitle ("Environment Topic") +
+          facet_grid(~author)
+p
+
+
+DFM_Env_Orig_Non0 %>% 
+  group_by(author) %>% 
+  summarize(mean = mean(proenv),
+            sum = sum(proenv))
+
+
+```
+
+## EXTRA: Task 6: Sentiment Analysis with Naive Bayes ##
+
+We might not want to go through the very toiling steps of doing extensive research to associate to dictionary classes. If we have a set of pre-labelled documents in our corpus (e.g. tweets that we know express extreme positive or negative sentiment on an issue) we can leverage those to classify the rest. However, we need a lot of Tweets to do that (since Tweets are very short), and it will be very time-consuming to train a sufficient number of text.
+
+As an extra exercise, we can replicate quanteda's tutorial on the NB - see: https://tutorials.quanteda.io/machine-learning/nb/
+
+The Naive Bayes (NB) machine learning algorithm can help us to side-step the dictionary creation process. As explained in lectures 9 and 10, the NB algorithm is a *supervised* text mining method that works by learning word and class probabilities from a *training* set. The R code below outlines how to input training texts into the NB algorithm and how to classify new (test) sets:
+
+```{r}
+#Upload corpus (movie reviews pre-loaded in quanteda)
+
+corp_movies <- data_corpus_moviereviews
+summary(corp_movies, 5)
+
+# generate 1500 numbers without replacement
+set.seed(300)
+id_train <- sample(1:2000, 1500, replace = FALSE)
+head(id_train, 10)
+
+# create docvar with ID
+corp_movies$id_numeric <- 1:ndoc(corp_movies)
+
+# tokenize texts
+toks_movies <- tokens(corp_movies, remove_punct = TRUE, remove_number = TRUE) %>% 
+               tokens_remove(pattern = stopwords("en")) %>% 
+               tokens_wordstem()
+dfmt_movie <- dfm(toks_movies)
+
+# get training set
+dfmat_training <- dfm_subset(dfmt_movie, id_numeric %in% id_train)
+
+# get test set (documents not in id_train)
+dfmat_test <- dfm_subset(dfmt_movie, !id_numeric %in% id_train)
+
+
+# training the NB model
+
+tmod_nb <- textmodel_nb(dfmat_training, dfmat_training$sentiment)
+summary(tmod_nb)
+
+#Naive Bayes can only take features into consideration that occur both in the training set and the test set - we can make the features identical using dfm_match() but this is why we ideally want a long enough training set
+
+dfmat_matched <- dfm_match(dfmat_test, features = featnames(dfmat_training))
+
+
+#check performance
+
+actual_class <- dfmat_matched$sentiment
+predicted_class <- predict(tmod_nb, newdata = dfmat_matched)
+tab_class <- table(actual_class, predicted_class)
+tab_class
+
+confusionMatrix(tab_class, mode = "everything")
+
+
+```
+
+
