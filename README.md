@@ -262,7 +262,7 @@ See folder ["Class 9 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 In this class you will learn about dictionaries and about the Naïve Bayes (NB) classifier, their advantages and disadvantages. You will see some empirical applications from the political science field and learn about some of the most important existing dictionaries. You will learn how to build your own bespoke dictionary as well. The lecture will also discuss the core functions from the quanteda package to perform dictionary and NB classification.
 
-In the problem set and computer lab, we will practice with the R code introduced in the lecture. We will also get our hands dirty by comparing Starmer and Corbyn's sentiment towards immigrants. The group exercise will reproduce the entire code and will challenge you to apply the sentiment analysis on Starmer's and Corbyn's tweets on the European Union instead.
+In the problem set and computer lab, we will practice with the R code introduced in the lecture, and you will be able to apply it to your scraped Tweets.
 
 
 ***Readings***
@@ -285,7 +285,7 @@ See folder ["Class 10 Material"](https://github.com/miriamsorace/MA5953-Creating
 
 In this class you will learn about topic model analysis, as well as its advantages and disadvantages and the various validation steps required. The lecture will also discuss the core functions from the quanteda and seededlda packages to perform topic model.
 
-In the problem set and computer lab, we will practice with the R code introduced in the lecture. We will also get our hands dirty by comparing and visualising the topics discussed by Starmer and Corbyn in their tweets.
+In the problem set and computer lab, we will practice with the R code introduced in the lecture. We will also get our hands dirty by comparing and visualising the topics discussed by the two politicians of your choice.
 
 ***Readings***
 
