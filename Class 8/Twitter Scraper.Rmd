@@ -1,0 +1,140 @@
+---
+title: 'Class 8: Twitter Scraper'
+author: "Miriam Sorace"
+date: "03/02/2022"
+output: html_document
+---
+
+## Global Options & Cran Mirrors ##
+
+```{r, include=FALSE}
+# include=FALSE means that this particular R code chunk will not be included in the final report. Useful for global settings or bits of code that might not be necessary to show in the final report (settings/set-up lines of code).
+if (!("knitr" %in% installed.packages())) {
+  install.packages('knitr', repos='http://cran.rstudio.org')}
+library(knitr)
+
+if (!("formatR" %in% installed.packages())) {
+  install.packages("formatR")}
+library(formatR)
+
+knitr::opts_chunk$set(echo = TRUE, error = FALSE, warning = FALSE, message = FALSE, fig.align = "center",
+                      tidy.opts=list(width.cutoff=70), tidy=TRUE) #to avoid source code going out of bounds
+                                                                  #does not work if single var name is too
+                                                                  #long though, as in point 5 below!  
+
+#this line is used to specify any global settings to be applied to the R Markdown script.   The example sets all code chunks as “echo=TRUE”, meaning they will be included in the final rendered version, whereas error/warning messages or any other messages from R will not be displayed in the final, 'knitted' R Markdown file.
+
+### permanently setting the CRAN mirror (avoids error "trying to use CRAN without setting a mirror")
+
+local({r <- getOption("repos")
+       r["CRAN"] <- "http://cran.r-project.org"
+       options(repos=r)})
+
+```
+
+
+## Installing the Relevant Packages ##
+
+```{r}
+
+if (!("rtweet" %in% installed.packages())) {
+  install.packages("rtweet")
+}
+if (!("tidytext" %in% installed.packages())) {
+  install.packages("tidytext")
+}
+if (!("ROAuth" %in% installed.packages())) {
+  install.packages("ROAuth")
+}
+if (!("readr" %in% installed.packages())) {
+  install.packages("readr")
+}
+if (!("ggplot2" %in% installed.packages())) {
+  install.packages("ggplot2")
+}
+if (!("dplyr" %in% installed.packages())) {
+  install.packages("dplyr")
+}
+if (!("readr" %in% installed.packages())) {
+  install.packages("readr")
+}
+
+#load the packages/libraries
+
+library(rtweet)
+library(tidytext)
+library(ROAuth)
+library(readr)
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+```
+
+
+## Set Working Directory ##
+
+```{r, include=F}
+## Either Session --> Set Working Directory --> To Source File Location (should do it automatically, but only when knitting - so, if you want to run the code bit by bit first do set the wd here). To Source File Location means that the data will be imported and saved IN THE SAME FOLDER where you saved the RMarkdown file you're working with!
+
+## OR
+
+## setwd("")
+
+```
+
+
+## Twitter Authorization Step ##
+
+Before using Twitter's APIs we need to register. You need to follow these steps, as outlined in the slides and lecture videos, materials!
+
+1. Go to https://developer.twitter.com/en/apps and sign in. If you don’t have a developer account, you will need to apply for one first. Fill in the application form and wait for a response.
+2. Click on “Create New App”. You will need to have a phone number associated with your account in order to be able to create a token.
+3. Fill name and description.
+4. Agree to user conditions.
+5.In the permission tab, make sure you have selected the option "Read, Write & Direct Messages"
+6. From the “Keys and Access Tokens” tab, copy token key and token secret and paste below
+7. Click on “Generate/Regenerate my access token”, then copy and paste your access token and access token secret below (make sure you do not add space characters in the process)
+
+NB: you need to also add the name of the app you have created to gain the credentials! See the lecture videos and materials to refresh all the steps required to gain access to the Twitter API.
+
+```{r}
+
+my_oauth <- rtweet::create_token(app = "nameofyourapp", 
+                                  consumer_key = "***********",
+                                  consumer_secret = "***********",
+                                  access_token="***********",
+                                  access_secret = "*********")
+
+```
+
+Make sure all API and ACCESS codes are pasted correctly without any additional space character.
+
+## Scraping tweets of particular users ##
+
+E.g. say we want to capture the last 3200 tweets (Twitter has rate limits!) by Barack Obama. We need to use the **get_timelines** wrapper function for that. Then we need to go on Twitter and copy/paste the specified user (in this case Obama's) Twitter handle - i.e. all that lies after the '@'- and paste it between the brackets.
+
+NB: If R returns the error `Error: Not a valid access token.' it means that your Keys and Authentication codes were copied/pasted incorrectly: go back to the Developer Dashboard, regenerate them and copy/paste the correct ones in the correct fields!
+
+```{r}
+Obamatweets <- get_timelines(c("BarackObama"), n = 3200, parse=T, token=my_oauth)
+
+
+##To save into .csv - 2 options:
+
+save_as_csv(Obamatweets, "Obama_tweets.csv", prepend_ids = TRUE, na = "", fileEncoding = "UTF-8")
+
+## OR - if the above yields encoding issues (weird symbols etc) use the below:
+
+write_excel_csv(x = Obamatweets, file="Obama_tweets.csv", col_names = TRUE)
+```
+
+
+## Independent Exercise (once you receive your Twitter API access credentials) ##
+
+Using the code provided above, scrape the tweets of the two politicians you intend to use for your final assignment. Please do this before next week's lab, so you can start using your scraped texts to run the text analyses!!
+
+```{r}
+
+```
+
