@@ -18,7 +18,7 @@ Submit your report on Moodle in the relevant submission folder. The submission w
 
 Also: no need to attach the cognitive interview/final interview datasets to the submission.
 
-(2) In this task you will have to scrape tweets from 2 politicians of your choice and carry out either a sentiment analysis or a topic model analysis, on the basis of a research question of your choosing. The 1,000 words report will include (a) a section describing/justifying the choice of research question and describing the text data scraped; (b) a section where the text mining method is presented, and (c) a section where the results from the comparison are presented (with visualisations and/or numerical summaries). The appendix and tables/figures and R code do not count towards the word limit. PLEASE include a word count at the top of your report. Website to count words [here](https://wordcounter.net).
+(2) In this task you will have to scrape tweets from 2 politicians and/or public figures of your choosing, on the opposite spectrum ideologically. You will then have to answer the question: how do they differ in the content they publish on Twitter? You will answer this question by interpreting (a) text descriptives; (b) results from a topic model analysis. The 1,000 words report will include (1) a section explaining what web-scraping is, what method/process was undertaken to scrape the tweets; (2) a section presenting the text descriptive statistics and graphs and interpretation of those; (3) a section where the topic modelling method is briefly explained and where the results from the comparison are presented (with visualisations and/or numerical summaries). The appendix and tables/figures and R code do not count towards the word limit. PLEASE include a word count at the top of your report. Website to count words [here](https://wordcounter.net).
 
 For both assessments, [R Markdown](http://rmarkdown.rstudio.com) will need to be used to generate the reports. The snippets of R code will need to be visible and will not count towards the word limit. The appendix will also not count towards the word limit. +/- 10% of the word limit is allowed.
 
@@ -26,7 +26,7 @@ Please submit your assessments in the relevant folder on the MA5953 Moodle page.
 
 ### Requirements
 
-You need to have installed the most up-to-date versions of [R](https://www.r-project.org) and  [RStudio](https://rstudio.com/products/rstudio/download/)
+You need to have installed the most up-to-date versions of [R](https://www.r-project.org) and  [RStudio](https://rstudio.com/products/rstudio/download/). Bring your own laptop to class if you can!
 
 Some prior knowledge of R and [R Markdown](http://rmarkdown.rstudio.com) is a must, make sure you understand the language basics (packages, objects/vectors, core functions and vector + basic data management operations), and that you know how to trouble-shoot errors and install packages. We will cover R Markdown in class as well, since assessments will need to be submitted using R Markdown.
 
@@ -52,17 +52,17 @@ The course will run for 5 weeks in the Autumn term and for 6 weeks in the Spring
 
 ***Spring Term: Web Scraping & Text Mining***
 
-6 Computer Labs of 2 hours each. NOTE: the class will be split into two groups in the second term! Please check your timetable to know your group.
+6 Computer Labs of 2 hours each. 
 
+Please check your timetable for information on room and timings.
 
 
 ## Detailed Course Schedule
 
 
-
 ### ***Autumn Term: Survey Design & Analysis*** ###
 
-### 10 NOV 2021 - Class 1: Introduction to the Course, Resources and to RMarkdown
+### 9 NOV 2022 - Class 1: Introduction to the Course, Resources and to RMarkdown
 
 This class will introduce the whole module, its assessment, requirements and the resources offered. We will also have a look at R Markdown and how to generate a report with it - as R Markdown files are required for submitting the two assessments. We will briefly introduce various survey types, and the advantages and disadvantages of various survey methods.
 
@@ -80,7 +80,7 @@ This class will introduce the whole module, its assessment, requirements and the
 
 See folder ["Class 1 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%201)
 
-### 17 NOV 2021 - Class 2: Principles of Survey Question Design 
+### 16 NOV 2022 - Class 2: Principles of Survey Question Design 
 
 This class will introduce practical advice on how best to design survey questions and will cover the cognitive model behind survey responses, cognitive interviewing and a discussion on how to properly pre-test and validate new survey items.
 
@@ -102,7 +102,7 @@ This class will introduce practical advice on how best to design survey question
 See folder ["Class 2 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%202)
 
 
-### 24 NOV 2021 - Class 3: Sampling & Data Collection Methods
+### 23 NOV 2022 - Class 3: Sampling & Data Collection Methods
 
 In this class, we will discuss the issue of representativeness: i.e. whether the survey's results are likely to represent the target population or not. We will talk about various types of sampling methods, and we will go over practical advice on how to collect survey responses and record them in appropriately formatted files. We will have a look at how to collect survey data by leveraging [Google Forms](https://www.google.co.uk/forms/about/), and also cover best practices for collecting, coding and storing survey responses.
 
@@ -122,7 +122,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 See folder ["Class 3 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%203)
 
 
-### 01 DEC 2021 - Class 4: Survey Error & Bias Correction
+### 30 NOV 2022 - Class 4: Survey Error & Bias Correction
 
 This class will cover survey error and topics such as unrepresentative samples, non-response bias, measurement error and interviewer/interview mode effects. We will discuss practical solutions to correct for such biases, and discuss survey weighting.
 
@@ -145,7 +145,7 @@ This class will cover survey error and topics such as unrepresentative samples, 
 See folder ["Class 4 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%204)
 
 
-### 08 DEC 2021 - Class 5: Ethical Issues, Recap and Assessment Q&A
+### 07 DEC 2022 - Class 5: Ethical Issues, Recap and Assessment Q&A
 
 This class will discuss ethical issues in the collection of survey data, will provide templates for consent forms, and provide a re-cap of the survey design and analysis process. You will also have an opportunity to discuss the requirements of the assessment.
 
@@ -169,7 +169,7 @@ See folder ["Class 5 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### ***Spring Term: Web Scraping & Text Mining*** ###
 
-### 21 JAN 2021 - Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
+### 18 JAN 2022 - Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
 
 This class will introduce you to data science, best practices in data collection and management as well as the most important markup languages that form the building blocks of websites and web applications - i.e.  HTML, XML, and JSON. The class will introduce web scraping by presenting some real-world applications.
 
@@ -192,7 +192,7 @@ See folder ["Class 6 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### 28 JAN 2021 - Class 7: Web Scraping & Regular Expressions
+### 25 JAN 2022 - Class 7: Web Scraping & Regular Expressions
 
 This class will introduce you to webscraping from static webpages. Dynamic webpage scraping will also be briefly introduced. You will learn about node query scraping, scraping via regular expressions, and scraping via APIs. You will then learn how to parse webpages, scrape tables, texts and links using R. You will also learn how to loop over URL lists and/or lists of links to scrape multiple webpages at once. 
 
@@ -214,7 +214,7 @@ See folder ["Class 7 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### 04 FEB 2021 - Class 8: Scraping Social Media Data
+### 01 FEB 2022 - Class 8: Scraping Social Media Data
 
 This class will introduce you to webscraping in Twitter. You will see some empirical applications of Twitter data from the political science, finance and public health fields. You will learn about the functioning of APIs more in depth, and how to gain access to Twitter rest and streaming APIs. The class will introduce the most important R packages and functions to scrape and clean Twitter data. 
 
@@ -232,7 +232,7 @@ This class will introduce you to webscraping in Twitter. You will see some empir
 See folder ["Class 8 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%208)
 
 
-### 11 FEB 2021 - Class 9: Text Mining I - Text Pre-Processing and the Document-Term Matrix 
+### 08 FEB 2022 - Class 9: Text Mining I - Text Pre-Processing and the Document-Term Matrix 
 
 This class will provide you with an overview of various text mining methods, from supervised to unsupervised ones, from classification to scaling ones. You will see some empirical applications of the various methods from the political science field. You will learn about corpora, tokens, stemming, stop-words, keywords-in-context, the td-idf measure, and - crucially - about the document-feature matrix (dfm) and the bag of words assumption. The lecture will also discuss the core functions from the quanteda package to clean and trim the dfm. 
 
@@ -258,7 +258,7 @@ See folder ["Class 9 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### 18 FEB 2021 - Class 10: Text Mining II - Sentiment Analysis: Dictionaries and the Naïve Bayes Classifier
+### 15 FEB 2022 - Class 10: Text Mining II - Sentiment Analysis: Dictionaries and the Naïve Bayes Classifier
 
 In this class you will learn about dictionaries and about the Naïve Bayes (NB) classifier, their advantages and disadvantages. You will see some empirical applications from the political science field and learn about some of the most important existing dictionaries. You will learn how to build your own bespoke dictionary as well. The lecture will also discuss the core functions from the quanteda package to perform dictionary and NB classification.
 
@@ -281,7 +281,7 @@ See folder ["Class 10 Material"](https://github.com/miriamsorace/MA5953-Creating
 
 
 
-### 25 FEB 2021 - Class 11: Text Mining III - Topic Models
+### 22 FEB 2022 - Class 11: Text Mining III - Topic Models
 
 In this class you will learn about topic model analysis, as well as its advantages and disadvantages and the various validation steps required. The lecture will also discuss the core functions from the quanteda and seededlda packages to perform topic model.
 
