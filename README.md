@@ -169,7 +169,7 @@ See folder ["Class 5 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### ***Spring Term: Web Scraping & Text Mining*** ###
 
-### 18 JAN 2022 - Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
+### 18 JAN 2023 - Class 6: Data Science – Data Collection Strategies & Primer on Web Technologies
 
 This class will introduce you to data science, best practices in data collection and management as well as the most important markup languages that form the building blocks of websites and web applications - i.e.  HTML, XML, and JSON. The class will introduce web scraping by presenting some real-world applications.
 
@@ -192,7 +192,7 @@ See folder ["Class 6 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### 25 JAN 2022 - Class 7: Web Scraping & Regular Expressions
+### 25 JAN 2023 - Class 7: Web Scraping & Regular Expressions
 
 This class will introduce you to webscraping from static webpages. Dynamic webpage scraping will also be briefly introduced. You will learn about node query scraping, scraping via regular expressions, and scraping via APIs. You will then learn how to parse webpages, scrape tables, texts and links using R. You will also learn how to loop over URL lists and/or lists of links to scrape multiple webpages at once. 
 
@@ -214,7 +214,7 @@ See folder ["Class 7 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### 01 FEB 2022 - Class 8: Scraping Social Media Data
+### 01 FEB 2023 - Class 8: Scraping Social Media Data
 
 This class will introduce you to webscraping in Twitter. You will see some empirical applications of Twitter data from the political science, finance and public health fields. You will learn about the functioning of APIs more in depth, and how to gain access to Twitter rest and streaming APIs. The class will introduce the most important R packages and functions to scrape and clean Twitter data. 
 
@@ -232,7 +232,7 @@ This class will introduce you to webscraping in Twitter. You will see some empir
 See folder ["Class 8 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%208)
 
 
-### 08 FEB 2022 - Class 9: Text Mining I - Text Pre-Processing and the Document-Term Matrix 
+### 08 FEB 2023 - Class 9: Text Mining I - Text Pre-Processing and the Document-Term Matrix 
 
 This class will provide you with an overview of various text mining methods, from supervised to unsupervised ones, from classification to scaling ones. You will see some empirical applications of the various methods from the political science field. You will learn about corpora, tokens, stemming, stop-words, keywords-in-context, the td-idf measure, and - crucially - about the document-feature matrix (dfm) and the bag of words assumption. The lecture will also discuss the core functions from the quanteda package to clean and trim the dfm. 
 
@@ -258,7 +258,7 @@ See folder ["Class 9 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### 15 FEB 2022 - Class 10: Text Mining II - Sentiment Analysis: Dictionaries and the Naïve Bayes Classifier
+### 15 FEB 2023 - Class 10: Text Mining II - Sentiment Analysis: Dictionaries and the Naïve Bayes Classifier
 
 In this class you will learn about dictionaries and about the Naïve Bayes (NB) classifier, their advantages and disadvantages. You will see some empirical applications from the political science field and learn about some of the most important existing dictionaries. You will learn how to build your own bespoke dictionary as well. The lecture will also discuss the core functions from the quanteda package to perform dictionary and NB classification.
 
@@ -281,7 +281,7 @@ See folder ["Class 10 Material"](https://github.com/miriamsorace/MA5953-Creating
 
 
 
-### 22 FEB 2022 - Class 11: Text Mining III - Topic Models
+### 22 FEB 2023 - Class 11: Text Mining III - Topic Models
 
 In this class you will learn about topic model analysis, as well as its advantages and disadvantages and the various validation steps required. The lecture will also discuss the core functions from the quanteda and seededlda packages to perform topic model.
 
