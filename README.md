@@ -98,7 +98,7 @@ This class will introduce practical advice on how best to design survey question
 
 ***Lecture Notes & Computer Lab Material***
 
-[In-class cognitive interviewing exercise](https://docs.google.com/forms/d/e/1FAIpQLSfRnb7fYKvpQh0xrPQSZy1L6t5kIqx05BIsYmH34EtdsjUMZA/viewform?usp=sf_link)
+[In-class cognitive interviewing exercise](https://forms.gle/sB3jVn6yvWxuowfd7)
 
 See folder ["Class 2 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%202)
 
