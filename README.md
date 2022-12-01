@@ -123,7 +123,7 @@ In this class, we will discuss the issue of representativeness: i.e. whether the
 See folder ["Class 3 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%203)
 
 
-### 30 NOV 2022 - Class 4: Survey Error & Bias Correction
+### 07 DEC 2022 - Class 4: Survey Error & Bias Correction
 
 This class will cover survey error and topics such as unrepresentative samples, non-response bias, measurement error and interviewer/interview mode effects. We will discuss practical solutions to correct for such biases, and discuss survey weighting.
 
@@ -146,7 +146,7 @@ This class will cover survey error and topics such as unrepresentative samples, 
 See folder ["Class 4 Material"](https://github.com/miriamsorace/MA5953-Creating-Your-Own-Data/tree/main/Class%204)
 
 
-### 07 DEC 2022 - Class 5: Ethical Issues, Recap and Assessment Q&A
+### 14 DEC 2022 - Class 5: Ethical Issues, Recap and Assessment Q&A
 
 This class will discuss ethical issues in the collection of survey data, will provide templates for consent forms, and provide a re-cap of the survey design and analysis process. You will also have an opportunity to discuss the requirements of the assessment.
 
