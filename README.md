@@ -125,7 +125,7 @@ See folder ["Class 3 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 ### 07 DEC 2022 - Class 4: Survey Error & Bias Correction
 
-This class will cover survey error and topics such as unrepresentative samples, non-response bias, measurement error and interviewer/interview mode effects. We will discuss practical solutions to correct for such biases, and discuss survey weighting.
+This class will cover total survey error and topics such as unrepresentative samples, non-response bias, measurement error and interviewer/interview mode effects. We will discuss practical solutions to correct for such biases, and discuss survey weighting.
 
 
 ***Readings***
