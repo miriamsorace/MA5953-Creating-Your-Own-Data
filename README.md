@@ -259,9 +259,9 @@ See folder ["Class 9 Material"](https://github.com/miriamsorace/MA5953-Creating-
 
 
 
-### 15 FEB 2023 - Class 10: Text Mining II - Sentiment Analysis: Dictionaries and the Naïve Bayes Classifier
+### 15 FEB 2023 - Class 10: Text Mining II - Sentiment Analysis
 
-In this class you will learn about dictionaries and about the Naïve Bayes (NB) classifier, their advantages and disadvantages. You will see some empirical applications from the political science field and learn about some of the most important existing dictionaries. You will learn how to build your own bespoke dictionary as well. The lecture will also discuss the core functions from the quanteda package to perform dictionary and NB classification.
+In this class you will learn about dictionaries and briefly about the Naïve Bayes (NB) classifier, their advantages and disadvantages. You will see some empirical applications from the political science field and learn about some of the most important existing dictionaries. You will learn how to build your own bespoke dictionary as well. The lecture will also discuss the core functions from the quanteda package to perform sentiment analysis.
 
 In the problem set and computer lab, we will practice with the R code introduced in the lecture, and you will be able to apply it to your scraped Tweets.
 
